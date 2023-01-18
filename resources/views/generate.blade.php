@@ -43,13 +43,12 @@
                 <option>Admin</option>
             </select>
         </div>
-
-          <div class="d-flex justify-content-center mb-4">
+        <div class="d-flex justify-content-center mb-4">
             <button class="btn btn-success btn-primary">SUBMIT</button>
         </div>
       </div>
     </div>
-  </div>
+    </div>
 </div>
 
      
