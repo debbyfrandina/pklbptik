@@ -26,7 +26,8 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="index.html">
-          <span class="align-middle">BPTIK DIKBUD</span>
+				<img class="rounded-circle" src="img/photos/logo.png" alt="" style="width: 50px; height: 60px;">
+				<span class="align-middle ms-2">BPTIK DIKBUD</span>
         </a>
 				<div>
 					<div class="d-flex align-items-center ms-4 mb-4">
@@ -68,7 +69,7 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="/logout">
+						<a class="sidebar-link" href="/login">
               <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
             </a>
 					</li>

@@ -41,3 +41,8 @@ Route::get('/generate', function () {
         "title" => "generate"
     ]);
 });
+Route::get('/login', function () {
+    return view('login',[
+        "title" => "login"
+    ]);
+});
