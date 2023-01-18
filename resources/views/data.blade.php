@@ -3,7 +3,7 @@
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
   <div class="navbar-collapse collapse">
-    <h1>table</h1>
+    <h1>TABLE</h1>
   </div>
 </nav>
 

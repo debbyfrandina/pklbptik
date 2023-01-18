@@ -36,18 +36,20 @@
           <div class="card-body">
             <h5 class="card-title mb-0">Jabatan</h5><br>
             <select class="form-select mb-3">
-                <option selected>Open this select menu</option>
-                <option>Three</option>
+                <option disabled>--Pilih Jabatan--</option>
+                <option>Admin</option>
+                <option>Sie Pengembangan</option>
+                <option>Sie Pemberdayaan</option>
+                <option>Admin</option>
             </select>
         </div>
-    </div>
 
           <div class="d-flex justify-content-center mb-4">
             <button class="btn btn-success btn-primary">SUBMIT</button>
         </div>
       </div>
     </div>
-    
+  </div>
 </div>
 
      
