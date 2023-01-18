@@ -9,7 +9,7 @@
 
 <div class="container-fluid p-0">
   {{-- table hehehe start --}}
-  <h1 class="h3 mb-3"><strong>Data</strong>Analytics</h1>
+  <h1 class="h3 mb-3"><strong>Data</strong>Form</h1>
   <div class="row">
     <div class="table-full-width d-flex">
       <div class="card flex-fill">
