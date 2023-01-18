@@ -12,9 +12,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-up.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
 
-	<title>REPORT DATA BPTIK DIKBUD</title>
+	<title>Sign In | AdminKit Demo</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -27,28 +27,31 @@
 				<div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
 					<div class="d-table-cell align-middle">
 
-						<div class="text-center mt-4">
-							<h1 class="h2">SELAMAT DATANG</h1>
-							<p class="lead">
-								BPTIK DIKBUD JAWA TENGAH
-							</p>
-						</div>
-
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-4">
+									<div class="text-center">
+										<img src="logo.png" alt="Charles Hall" class="img-fluid rounded-circle" width="132" height="132" />
+									</div>
+									
+									<div class="text-center mt-4">
+										<h1 class="h2">REPORT DATA BPTIK DIKBUD JATENG</h1>
+										<p class="lead">Silahkan masukkan NIP dan Password</p>
+									</div>
+
 									<form>
 										<div class="mb-3">
 											<label class="form-label">NIP</label>
-											<input class="form-control form-control-lg" type="text" name="name" placeholder="Input NIP" required/>
+											<input class="form-control form-control-lg" type="email" name="email" placeholder="Input NIP" required/>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
-											<input class="form-control form-control-lg" type="text" name="company" placeholder="Input Password" required/>
+											<input class="form-control form-control-lg" type="password" name="password" placeholder="Input Password" required/>
+											<small>
 										</div>
 										<div class="text-center mt-3">
-											<a href="/" class="btn btn-lg btn-primary">Login</a>
-											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
+											<a href="index.html" class="btn btn-lg btn-primary">Login</a>
+											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
 										</div>
 									</form>
 								</div>
