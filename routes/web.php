@@ -14,5 +14,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard',[
+        "title" => "dashboard"
+    ]);
+    
+});
+
+Route::get('/test', function () {
+    return view('test',[
+        "title" => "test"
+    ]);
+});
+
+Route::get('/form', function () {
+    return view('form',[
+        "title" => "form"
+    ]);
+});
+Route::get('/data', function () {
+    return view('data',[
+        "title" => "data"
+    ]);
+});
+Route::get('/generate', function () {
+    return view('generate',[
+        "title" => "generate"
+    ]);
 });
