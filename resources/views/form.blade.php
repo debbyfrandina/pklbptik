@@ -8,7 +8,7 @@
 </nav>
 
 <div class="container-fluid p-0">
-  {{-- table start --}}
+  {{-- table hehehe start --}}
   <h1 class="h3 mb-3"><strong>Data</strong>Analytics</h1>
   <div class="row">
     <div class="table-full-width d-flex">
