@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'pklbptik.test'),
+    'url' => env('APP_URL', 'https://pklbptik.test '),
 
     'asset_url' => env('ASSET_URL'),
 
