@@ -32,6 +32,18 @@
             <h5 class="card-title mb-0">Konfirmasi Password</h5><br>
             <textarea class="form-control" rows="3" placeholder="Ulangi Password" required></textarea>
           </div>
+
+          <div class="card-body">
+            <h5 class="card-title mb-0">Jabatan</h5><br>
+            <select class="form-select mb-3">
+                <option selected>Open this select menu</option>
+                <option>Three</option>
+            </select>
+        </div>
+    </div>
+
+          <div class="d-flex justify-content-center mb-4">
+            <button class="btn btn-success btn-primary">SUBMIT</button>
         </div>
       </div>
     </div>
