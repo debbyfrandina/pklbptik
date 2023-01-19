@@ -26,21 +26,21 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="index.html">
-				<img class="rounded-circle" src="img/photos/logo.png" alt="" style="width: 50px; height: 60px;">
-				<span class="align-middle ms-2">BPTIK DIKBUD</span>
+					<img class="rounded-circle" src="img/photos/logo.png" alt="" style="width: 50px; height: 60px;">
+					<span class="align-middle ms-2">BPTIK DIKBUD</span>
         </a>
 				<div>
 					<div class="d-flex align-items-center ms-4 mb-4">
 						<div class="position-relative">
 							<img class="rounded-circle" src="img/avatars/avatar-2.jpg" alt="" style="width: 40px; height: 40px;">
-						<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-					</div>
-					<div class="ms-3">
-						<h6 class="align-middle mb-0 text-light">Jhon Doe</h6>
-						<span>Admin</span>
+								<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+						</div>
+						<div class="ms-3">
+							<h6 class="align-middle mb-0 text-light">Jhon Doe</h6>
+							<span>Admin</span>
+						</div>
 					</div>
 				</div>
-			</div>
 
 				<ul class="sidebar-nav">
 
@@ -73,35 +73,23 @@
               <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
             </a>
 					</li>
-
 				</ul>
 			</div>
 		</nav>
 
-		<div class="main">
+	<div class="main">
 			<!-- content start -->
 			<div class="container">
         @yield('container')
       </div>
-
-			<!-- footer start -->
-			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-6 text-start">
-							<p class="mb-0">
-								<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
-							</p>
-						</div>
-						<div class="col-6 text-end">
-							<ul class="list-inline">
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
+	<!-- footer start -->
+	<footer class="footer">
+		<div class="container-fluid row text-muted col-6 text-start">
+			<p class="mb-0">
+				<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
+			</p>
 		</div>
-	</div>
+	</footer>
 
 	<script src="js/app.js"></script>
 

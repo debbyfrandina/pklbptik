@@ -23,6 +23,7 @@
                 <th class="d-xl-table-cell">Outcome</th>
                 <th class="d-xl-table-cell">Jumlah Output</th>
                 <th class="d-xl-table-cell">Tanggal Edit</th>
+                <th class="d-xl-table-cell">Nama</th>
                 <th class="d-xl-table-cell">Aksi</th>
                 
               </tr>
@@ -35,11 +36,13 @@
                 <td class="d-xl-table-cell">Murid dapat mengimplementasi pemanfaatan TIK pd pembelajaran</td>
                 <td class="d-xl-table-cell text-center">1000</td>
                 <td class="d-xl-table-cell text-center">01-01-01 23:59:59</td>
+                <td class="d-xl-table-cell text-center">Maharani Swas</td>
                 <td class="d-xl-table-cell text-center">
-                  <a class="btn btn-info btn-sm" href="#">Detail</a>
-                  <a class="btn btn-warning btn-sm"  href="#">Edit</a>
-                  <a class="btn btn-danger btn-sm"  href="#">Delete</a>
+                  <div class="btn-group btn-group-lg mb-3" role="group" aria-label="Default button group">
+                    <a class="btn btn-info" href="#">Detail</a>
+                  </div>
                 </td>
+                
               </tr>
               
             </tbody>
@@ -48,4 +51,8 @@
       </div>
     </div>
   </div>
+
+  <div class="d-flex justify-content-center mb-3">
+    <button class="btn btn-success btn-primary">Tambah</button>
+  </div>  
 @endsection
