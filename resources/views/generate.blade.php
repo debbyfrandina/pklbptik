@@ -25,12 +25,12 @@
 
           <div class="card-body">
             <h5 class="card-title mb-0">Password</h5><br>
-            <textarea class="form-control" rows="3" placeholder="Input Password" required></textarea>
+            <input type="text" class="form-control" rows="3" placeholder="Input Password" required></textarea>
           </div>
         
           <div class="card-body">
             <h5 class="card-title mb-0">Konfirmasi Password</h5><br>
-            <textarea class="form-control" rows="3" placeholder="Ulangi Password" required></textarea>
+            <input type="text" class="form-control" rows="3" placeholder="Ulangi Password" required></textarea>
           </div>
 
           <div class="card-body">
