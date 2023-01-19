@@ -32,16 +32,28 @@
 				<div>
 					<div class="d-flex align-items-center ms-4 mb-4">
 						<div class="ms-3">
-							<i class="align-middle text-light"></i> 
-							<span class="align-midle text-light">Viewer</span>
+							<h6 class="align-middle mb-0 text-light">Jhon Doe</h6>
+							<span>Sie Pemberdayaan</span>
 						</div>
 					</div>
 				</div>
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-item {{ ($title === "dashboard" ) ? 'active' : '' }}">
-						<a class="sidebar-link " href="/">
+						<a class="sidebar-link " href="/pemberdayaan">
               <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item {{ ($title === "form" ) ? 'active' : '' }}">
+						<a class="sidebar-link " href="/form">
+              <i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data Pemberdayaan</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
+						<a class="sidebar-link" href="/data">
+              <i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pemberdayaan</span>
             </a>
 					</li>
 
@@ -57,7 +69,7 @@
 		<div class="main">
 			<!-- content start -->
 			<div class="container">
-				@yield('container')
+				@yield('container_pbd')
 			</div>
 			
 			<footer class="footer ">

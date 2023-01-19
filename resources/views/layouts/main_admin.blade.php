@@ -32,22 +32,40 @@
 				<div>
 					<div class="d-flex align-items-center ms-4 mb-4">
 						<div class="ms-3">
-							<i class="align-middle text-light"></i> 
-							<span class="align-midle text-light">Viewer</span>
+							<h6 class="align-middle mb-0 text-light">Jhon Doe</h6>
+							<span>Admin</span>
 						</div>
 					</div>
 				</div>
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-item {{ ($title === "dashboard" ) ? 'active' : '' }}">
-						<a class="sidebar-link " href="/">
+						<a class="sidebar-link " href="/admin">
               <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Dashboard</span>
             </a>
 					</li>
 
+					<li class="sidebar-item {{ ($title === "form" ) ? 'active' : '' }}">
+						<a class="sidebar-link " href="/form">
+              <i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data TU</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
+						<a class="sidebar-link" href="/data">
+              <i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Tata Usaha</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item {{ ($title === "generate" ) ? 'active' : '' }}">
+						<a class="sidebar-link" href="/generate">
+              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Generate Akun</span>
+            </a>
+					</li>
+
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="/login">
-              <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Login</span>
+						<a class="sidebar-link" href="/">
+              <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
             </a>
 					</li>
 				</ul>
@@ -57,7 +75,7 @@
 		<div class="main">
 			<!-- content start -->
 			<div class="container">
-				@yield('container')
+				@yield('container_admin')
 			</div>
 			
 			<footer class="footer ">

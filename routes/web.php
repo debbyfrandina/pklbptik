@@ -17,7 +17,27 @@ Route::get('/', function () {
     return view('dashboard',[
         "title" => "dashboard"
     ]);
-    
+});
+
+Route::get('/admin', function () {
+    return view('dashboard_admin',[
+        "title" => "dashboard_admin"
+    ]);
+});
+Route::get('/pengembangan', function () {
+    return view('dashboard_pgb',[
+        "title" => "dashboard_pgb"
+    ]);
+});
+Route::get('/pemberdayaan', function () {
+    return view('dashboard_pbd',[
+        "title" => "dashboard_pbd"
+    ]);
+});
+Route::get('/pimpinan', function () {
+    return view('dashboard_pimpinan',[
+        "title" => "dashboard_pimpinan"
+    ]);
 });
 
 Route::get('/test', function () {
