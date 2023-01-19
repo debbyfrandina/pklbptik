@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,13 @@ Route::get('/form', function () {
         "title" => "form"
     ]);
 });
+
+Route::get('/input-form', function () {
+    return view('input',[
+        "title" => "Input_Form"
+    ]);
+});
+
 Route::get('/data', function () {
     return view('data',[
         "title" => "data"
@@ -61,8 +69,5 @@ Route::get('/generate', function () {
         "title" => "generate"
     ]);
 });
-Route::get('/login', function () {
-    return view('login',[
-        "title" => "login"
-    ]);
-});
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);

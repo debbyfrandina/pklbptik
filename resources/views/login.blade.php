@@ -39,7 +39,8 @@
 										<p class="lead">Silahkan masukkan NIP dan Password</p>
 									</div>
 
-									<form>
+									<form action="/login" method="POST">
+										@csrf
 										<div class="mb-3">
 											<label class="form-label">NIP</label>
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Input NIP" required/>
@@ -50,8 +51,8 @@
 											<small>
 										</div>
 										<div class="text-center mt-3">
-											<a href="/" class="btn btn-lg btn-primary">Login</a>
-											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
+											{{-- <button class="btn btn-lg btn-primary">Login</a> --}}
+											<button type="submit" class="btn btn-lg btn-primary">Sign in</button>
 										</div>
 									</form>
 								</div>
