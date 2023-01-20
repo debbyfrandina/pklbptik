@@ -42,8 +42,8 @@
 									<form action="/login" method="POST">
 										@csrf
 										<div class="mb-3">
-											<label class="form-label">NIP</label>
-											<input class="form-control form-control-lg" type="email" name="email" placeholder="Input NIP" required/>
+											<label class="form-label">Email</label>
+											<input class="form-control form-control-lg" type="email" name="email" placeholder="Input email" required/>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
