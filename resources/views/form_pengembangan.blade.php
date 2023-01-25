@@ -93,7 +93,12 @@
 
         <div class="card-body">
           <h5 class="card-title mb-0">Tanggal Pelaksanaan</h5><br>
-          <input type="datetime-local">
+          <input type="date-local">
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title mb-0">Tanggal Akhir Pelaksanaan</h5><br>
+          <input type="date-local">
         </div>
 
         <div class="card-body">
