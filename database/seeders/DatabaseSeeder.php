@@ -8,6 +8,8 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\JabatanSeeder;
 use Database\Seeders\LaporanSeeder;
+use Database\Seeders\DataPengembanganSeeder;
+use Database\Seeders\DataPemberdayaanSeeder;
 
 class DatabaseSeeder extends Seeder
 {

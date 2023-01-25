@@ -18,8 +18,8 @@
             <tr>
               <th class="d-xl-table-cell">No</th>
               <th class="d-xl-table-cell">Nama Program</th>
-              <th class="d-xl-table-cell">Outcome</th>
               <th class="d-xl-table-cell">Tujuan</th>
+              <th class="d-xl-table-cell">Outcome</th>
               <th class="d-xl-table-cell">Tanggal Pelaksanaan</th>
               <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
               <th class="d-xl-table-cell">Jumlah Peserta</th>

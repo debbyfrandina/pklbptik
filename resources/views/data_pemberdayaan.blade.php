@@ -19,8 +19,8 @@
               <tr>
                 <th class="d-xl-table-cell">No</th>
                 <th class="d-xl-table-cell">Nama Program</th>
-                <th class="d-xl-table-cell">Outcome</th>
                 <th class="d-xl-table-cell">Tujuan</th>
+                <th class="d-xl-table-cell">Outcome</th>
                 <th class="d-xl-table-cell">Tanggal Pelaksanaan</th>
                 <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
                 <th class="d-xl-table-cell">Jumlah Peserta</th>
@@ -33,7 +33,7 @@
               <tr>
                 <td class="d-xl-table-cell text-center">1</td>
                 <td class="d-xl-table-cell">Pelatihan Sistem abc untuk SMA</td>
-                <td class="d-xl-table-cell">memberikan sosialisasi pemanfaatan TIK sistem abc pada murid di SMA</td>
+                <td class="d-xl-table-cell">Memberikan sosialisasi pemanfaatan TIK sistem abc pada murid di SMA</td>
                 <td class="d-xl-table-cell">Murid SMA yang mendapat pelatihan dapat mengimplementasi pemanfaatan TIK pd pembelajaran</td>
                 <td class="d-xl-table-cell text-center">01-01-23</td>
                 <td class="d-xl-table-cell">SMAN 1 ABC</td>
