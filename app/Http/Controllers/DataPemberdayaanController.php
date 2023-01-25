@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DataPemberdayaan;
 use App\Http\Requests\StoreDataPemberdayaanRequest;
 use App\Http\Requests\UpdateDataPemberdayaanRequest;
+use App\Http\Controllers\Controller;
 
 class DataPemberdayaanController extends Controller
 {
@@ -13,9 +14,24 @@ class DataPemberdayaanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function data()
     {
-        //
+        $data_pemberdayaan = DataPemberdayaan::all();
+
+        return view('data_pemberdayaan',[
+            "title" => "Data Pemberdayaan",
+            "data" => $data_pemberdayaan
+        ]);
+    }
+
+    public function form()
+    {
+        $data_pemberdayaan = DataPemberdayaan::where('user_id','=', auth()->user()->id)->get();
+
+        return view('form_pemberdayaan',[
+            "title" => "Form Pemberdayaan",
+            "data" => $data_pemberdayaan
+        ]);
     }
 
     /**

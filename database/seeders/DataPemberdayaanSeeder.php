@@ -25,6 +25,7 @@ class DataPemberdayaanSeeder extends Seeder
                 'tempat_pelaksanaan' => 'SMAN 1 Kabupaten Semarang',
                 'jumlah_peserta' => '1000',
                 'jumlah_sekolah' => '15',
+                'user_id' => '3',
             ],
         ]);
     }

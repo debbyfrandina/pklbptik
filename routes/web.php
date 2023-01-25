@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DataPemberdayaanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,17 +33,19 @@ Route::get('/form', function () {
     ]);
 });
 
-Route::get('/form-pemberdayaan', function () {
-    return view('form_pemberdayaan',[
-        "title" => "form pemberdayaan"
-    ]);
-});
+// Route::get('/form-pemberdayaan', function () {
+//     return view('form_pemberdayaan',[
+//         "title" => "form pemberdayaan"
+//     ]);
+// });
 
 Route::get('/form-pengembangan', function () {
     return view('form_pengembangan',[
         "title" => "form pengembangan"
     ]);
 });
+
+Route::get('/form-pemberdayaan', [DataPemberdayaanController::class, 'form']);
 
 Route::get('/input-form', function () {
     return view('input',[
@@ -61,6 +64,8 @@ Route::get('/data-pemberdayaan', function () {
         "title" => "data pemberdayaan"
     ]);
 });
+
+Route::get('/data-pemberdayaan', [DataPemberdayaanController::class, 'data']);
 
 Route::get('/data-pengembangan', function () {
     return view('data_pengembangan',[

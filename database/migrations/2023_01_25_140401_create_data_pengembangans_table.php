@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('nama_kegiatan');
             $table->string('nama_sub_kegiatan');
             $table->string('nama_sub_sub_kegiatan');
-            $table->date('tanggal_pelaksanaan');
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
             $table->string('tempat_pelaksanaan');
             $table->integer('jumlah_peserta');
             $table->integer('jumlah_produk');
