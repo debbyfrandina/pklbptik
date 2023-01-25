@@ -16,10 +16,14 @@ return new class extends Migration
         Schema::create('data_pengembangans', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nama');
-            $table->string('tujuan');
-            $table->string('outcome');
-            $table->integer('jumlah');
+            $table->string('nama_program');
+            $table->string('nama_kegiatan');
+            $table->string('nama_sub_kegiatan');
+            $table->string('nama_sub_sub_kegiatan');
+            $table->date('tanggal_pelaksanaan');
+            $table->string('tempat_pelaksanaan');
+            $table->integer('jumlah_peserta');
+            $table->integer('jumlah_produk');
             // $table->integer('berkas');
             $table->foreignId('user_id');
         });
