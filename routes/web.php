@@ -38,6 +38,12 @@ Route::get('/form-pemberdayaan', function () {
     ]);
 });
 
+Route::get('/form-pengembangan', function () {
+    return view('form_pengembangan',[
+        "title" => "form pengembangan"
+    ]);
+});
+
 Route::get('/input-form', function () {
     return view('input',[
         "title" => "Input_Form"
