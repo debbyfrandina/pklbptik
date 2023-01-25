@@ -92,9 +92,8 @@
         </div>
 
         <div class="card-body">
-          <input type="datetime-local">
           <h5 class="card-title mb-0">Tanggal Pelaksanaan</h5><br>
-          <textarea class="form-control" rows="3" placeholder="Input tujuan kegiatan" required></textarea>
+          <input type="datetime-local">
         </div>
 
         <div class="card-body">
