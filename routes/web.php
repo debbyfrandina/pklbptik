@@ -20,27 +20,6 @@ Route::get('/', function () {
     ]);
 });
 
-// Route::get('/admin', function () {
-//     return view('dashboard',[
-//         "title" => "dashboard_admin"
-//     ]);
-// });
-// Route::get('/pengembangan', function () {
-//     return view('dashboard',[
-//         "title" => "dashboard_pgb"
-//     ]);
-// });
-// Route::get('/pemberdayaan', function () {
-//     return view('dashboard',[
-//         "title" => "dashboard_pbd"
-//     ]);
-// });
-// Route::get('/pimpinan', function () {
-//     return view('dashboard_pimpinan',[
-//         "title" => "dashboard_pimpinan"
-//     ]);
-// });
-
 Route::get('/test', function () {
     return view('test',[
         "title" => "test"
@@ -50,6 +29,12 @@ Route::get('/test', function () {
 Route::get('/form', function () {
     return view('form',[
         "title" => "form"
+    ]);
+});
+
+Route::get('/form-pemberdayaan', function () {
+    return view('form_pemberdayaan',[
+        "title" => "form pemberdayaan"
     ]);
 });
 

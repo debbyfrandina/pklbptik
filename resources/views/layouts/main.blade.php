@@ -53,7 +53,7 @@
 						</div>
 					</div>
 					@endif
-					
+
 				</div>
 				
 				@if (auth()->user())
@@ -126,7 +126,7 @@
 						</li>
 
 						<li class="sidebar-item {{ ($title === "form" ) ? 'active' : '' }}">
-							<a class="sidebar-link " href="/form">
+							<a class="sidebar-link " href="/form-pemberdayaan">
 								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data Pemberdayaan</span>
 							</a>
 						</li>
