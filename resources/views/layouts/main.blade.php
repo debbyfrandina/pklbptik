@@ -98,14 +98,14 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "form" ) ? 'active' : '' }}">
-							<a class="sidebar-link " href="/form">
+						<li class="sidebar-item {{ ($title === "form pengembangan" ) ? 'active' : '' }}">
+							<a class="sidebar-link " href="/form-pengembangan">
 								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Sie Pengembangan</span>
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
-							<a class="sidebar-link" href="/data">
+						<li class="sidebar-item {{ ($title === "data pengembangan" ) ? 'active' : '' }}">
+							<a class="sidebar-link" href="/data-pengembangan">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pengembangan</span>
 							</a>
 						</li>
@@ -125,21 +125,21 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "form" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "form pemberdayaan" ) ? 'active' : '' }}">
 							<a class="sidebar-link " href="/form-pemberdayaan">
 								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data Pemberdayaan</span>
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
-							<a class="sidebar-link" href="/data">
+						<li class="sidebar-item {{ ($title === "data pemberdayaan" ) ? 'active' : '' }}">
+							<a class="sidebar-link" href="/data-pemberdayaan">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pemberdayaan</span>
 							</a>
 						</li>
 
 						<li class="sidebar-item">
-							<a class="sidebar-link" href="/login">
-								<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Login</span>
+							<a class="sidebar-link" href="/logout">
+								<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
 							</a>
 						</li>
 					</ul>

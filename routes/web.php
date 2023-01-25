@@ -49,6 +49,13 @@ Route::get('/data', function () {
         "title" => "data"
     ]);
 });
+
+Route::get('/data-pemberdayaan', function () {
+    return view('data_pemberdayaan',[
+        "title" => "data pemberdayaan"
+    ]);
+});
+
 Route::get('/generate', function () {
     return view('generate',[
         "title" => "generate"
