@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([JabatanSeeder::class, LaporanSeeder::class, UserSeeder::class]);
+        $this->call([JabatanSeeder::class, LaporanSeeder::class, UserSeeder::class, DataPengembanganSeeder::class, DataPemberdayaanSeeder::class]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
