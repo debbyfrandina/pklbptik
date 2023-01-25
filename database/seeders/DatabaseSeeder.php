@@ -8,6 +8,8 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\JabatanSeeder;
 use Database\Seeders\LaporanSeeder;
+use Database\Seeders\DataPengembanganSeeder;
+use Database\Seeders\DataPemberdayaanSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +20,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([JabatanSeeder::class, LaporanSeeder::class, UserSeeder::class]);
+        $this->call([JabatanSeeder::class, LaporanSeeder::class, UserSeeder::class, DataPengembanganSeeder::class, DataPemberdayaanSeeder::class]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

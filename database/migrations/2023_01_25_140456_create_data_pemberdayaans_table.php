@@ -16,6 +16,15 @@ return new class extends Migration
         Schema::create('data_pemberdayaans', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nama_program');
+            $table->string('tujuan');
+            $table->string('outcome');
+            $table->date('tanggal_pelaksanaan');
+            $table->string('tempat_pelaksanaan');
+            $table->integer('jumlah_peserta');
+            $table->integer('jumlah_sekolah');
+            // $table->integer('berkas');
+            $table->foreignId('user_id');
         });
     }
 
