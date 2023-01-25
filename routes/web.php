@@ -62,6 +62,12 @@ Route::get('/data-pemberdayaan', function () {
     ]);
 });
 
+Route::get('/data-pengembangan', function () {
+    return view('data_pengembangan',[
+        "title" => "data pengembangan"
+    ]);
+});
+
 Route::get('/generate', function () {
     return view('generate',[
         "title" => "generate"

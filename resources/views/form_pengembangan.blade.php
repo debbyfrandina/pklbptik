@@ -25,6 +25,7 @@
               <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
               <th class="d-xl-table-cell">Jumlah Peserta</th>
               <th class="d-xl-table-cell">Jumlah Produk</th>
+              <th class="d-xl-table-cell">Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -33,12 +34,16 @@
               <td class="d-xl-table-cell">Program Pengelolaan Pendidikan</td>
               <td class="d-xl-table-cell">Pengelolaan pendidikan SMK</td>
               <td class="d-xl-table-cell">Pengadaan  Alat & Peraga Siswa</td>
-              <td class="d-xl-table-cell text-center">1000</td>
+              <td class="d-xl-table-cell">
+                - Aplikasi prototype media pembelajaran berbasis edugame <br>
+                - Vodcast berbagi
+              </td>
               <td class="d-xl-table-cell text-center">01/01/23 - 01/07/23</td>
               <td class="d-xl-table-cell text-center nav-">SMK N Tunas Bangsa Magelang</td>
               <td class="d-xl-table-cell text-center">1000</td>
               <td class="d-xl-table-cell text-center">3</td>
-              <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
+              <td class="d-xl-table-cell text-center nav-">
+                <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                   <a class="btn btn-info" href="#">Detail</a>
                   <a class="btn btn-warning" href="#">Edit</a>
                   <a class="btn btn-danger" href="#">Delete</a>
