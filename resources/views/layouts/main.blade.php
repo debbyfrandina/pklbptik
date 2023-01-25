@@ -158,13 +158,13 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
-							<a class="sidebar-link" href="/data">
+						<li class="sidebar-item {{ ($title === "data pengembangan" ) ? 'active' : '' }}">
+							<a class="sidebar-link" href="/data-pengembangan">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pengembangan</span>
 							</a>
 						</li>
-						<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
-							<a class="sidebar-link" href="/data">
+						<li class="sidebar-item {{ ($title === "data pemberdayaan" ) ? 'active' : '' }}">
+							<a class="sidebar-link" href="/data-pemberdayaan">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pemberdayaan</span>
 							</a>
 						</li>

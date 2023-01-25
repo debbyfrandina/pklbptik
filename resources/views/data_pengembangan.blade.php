@@ -26,6 +26,7 @@
                 <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
                 <th class="d-xl-table-cell">Jumlah Peserta</th>
                 <th class="d-xl-table-cell">Jumlah Produk</th>
+                <th class="d-xl-table-cell">Tanggal Edit</th>
                 <th class="d-xl-table-cell">Aksi</th>
               </tr>
             </thead>
@@ -43,6 +44,7 @@
                 <td class="d-xl-table-cell text-center nav-">SMK N Tunas Bangsa Magelang</td>
                 <td class="d-xl-table-cell text-center">1000</td>
                 <td class="d-xl-table-cell text-center">3</td>
+                <td class="d-xl-table-cell text-center">01-01-01 23:59:59</td>
                 <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                     <a class="btn btn-info" href="#">Detail</a>
