@@ -16,7 +16,7 @@
         <table class="table table-hover my-0">
           <thead class="align-center text-center">
             <tr>
-              <th class="d-xl-table-cell ">No</th>
+              <th class="d-xl-table-cell">No</th>
               <th class="d-xl-table-cell">Nama Program</th>
               <th class="d-xl-table-cell">Nama Kegiatan</th>
               <th class="d-xl-table-cell">Nama Sub Kegiatan</th>
@@ -29,8 +29,7 @@
             </tr>
           </thead>
           <tbody>
-
-          <?php $i = 1 ?>
+            <?php $i = 1 ?>
             @foreach ($data as $d)
             <tr>
               <td class="d-xl-table-cell text-center">{{ $i++ }}</td>
