@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DataPengembangan;
 use App\Http\Requests\StoreDataPengembanganRequest;
 use App\Http\Requests\UpdateDataPengembanganRequest;
+use App\Http\Controllers\Controller;
 
 class DataPengembanganController extends Controller
 {
@@ -13,20 +14,26 @@ class DataPengembanganController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function data()
     {
-        //
+        $data_pengembangan = DataPengembangan::all();
+
+        return view('data_pengembangan',[
+            "title" => "Data Pengembangan",
+            "data" => $data_pengembangan
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function form()
     {
-        //
+        $data_pengembangan = DataPengembangan::where('user_id','=', auth()->user()->id)->get();
+
+        return view('form_pengembangan',[
+            "title" => "Form Pengembangan",
+            "data" => $data_pengembangan
+        ]);
     }
+
 
     /**
      * Store a newly created resource in storage.

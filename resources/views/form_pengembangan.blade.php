@@ -29,19 +29,20 @@
             </tr>
           </thead>
           <tbody>
+
+          <?php $i = 1 ?>
+            @foreach ($data as $d)
             <tr>
-              <td class="d-xl-table-cell text-center">1</td>
-              <td class="d-xl-table-cell">Program Pengelolaan Pendidikan</td>
-              <td class="d-xl-table-cell">Pengelolaan pendidikan SMK</td>
-              <td class="d-xl-table-cell">Pengadaan  Alat & Peraga Siswa</td>
-              <td class="d-xl-table-cell">
-                - Aplikasi prototype media pembelajaran berbasis edugame <br>
-                - Vodcast berbagi
-              </td>
-              <td class="d-xl-table-cell text-center">01/01/23 - 01/07/23</td>
-              <td class="d-xl-table-cell text-center nav-">SMK N Tunas Bangsa Magelang</td>
-              <td class="d-xl-table-cell text-center">1000</td>
-              <td class="d-xl-table-cell text-center">3</td>
+              <td class="d-xl-table-cell text-center">{{ $i++ }}</td>
+              <td class="d-xl-table-cell">{{ $d->nama_program }}</td>
+              <td class="d-xl-table-cell">{{ $d->nama_kegiatan }}</td>
+              <td class="d-xl-table-cell">{{ $d->nama_sub_kegiatan }}</td>
+              <td class="d-xl-table-cell text-center">{{ $d->nama_sub_sub_kegiatan }}</td>
+              <td class="d-xl-table-cell">{{ $d->tanggal_pelaksanaan }}</td>
+              <td class="d-xl-table-cell">{{ $d->tempat_pelaksanaan }}</td>
+              <td class="d-xl-table-cell text-center">{{ $d->jumlah_peserta }}</td>
+              <td class="d-xl-table-cell text-center">{{ $d->jumlah_produk }}</td>
+              <td class="d-xl-table-cell text-center">{{ $d->update_at }}</td>
               <td class="d-xl-table-cell text-center nav-">
                 <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                   <a class="btn btn-info" href="#">Detail</a>
@@ -50,6 +51,7 @@
                 </div>
               </td>
             </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
