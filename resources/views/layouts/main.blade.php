@@ -98,13 +98,13 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "form pengembangan" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Form Pengembangan" ) ? 'active' : '' }}">
 							<a class="sidebar-link " href="/form-pengembangan">
 								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Sie Pengembangan</span>
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "data pengembangan" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Data Pengembangan" ) ? 'active' : '' }}">
 							<a class="sidebar-link" href="/data-pengembangan">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pengembangan</span>
 							</a>
@@ -125,13 +125,13 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "form pemberdayaan" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Form Pemberdayaan" ) ? 'active' : '' }}">
 							<a class="sidebar-link " href="/form-pemberdayaan">
 								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data Pemberdayaan</span>
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "data pemberdayaan" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Data Pemberdayaan" ) ? 'active' : '' }}">
 							<a class="sidebar-link" href="/data-pemberdayaan">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Sie Pemberdayaan</span>
 							</a>

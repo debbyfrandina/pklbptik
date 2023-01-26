@@ -38,8 +38,8 @@
                 <td class="d-xl-table-cell">{{ $d->nama_program }}</td>
                 <td class="d-xl-table-cell">{{ $d->nama_kegiatan }}</td>
                 <td class="d-xl-table-cell">{{ $d->nama_sub_kegiatan }}</td>
-                <td class="d-xl-table-cell">{{ $d->nama_sub_sub_kegiatan }}</td>
-                <td class="d-xl-table-cell text-center">{{ $d->tanggal_pelaksanaan }}</td>
+                <td class="d-xl-table-cell text-center">{{ $d->nama_sub_sub_kegiatan }}</td>
+                <td class="d-xl-table-cell">{{ $d->tanggal_pelaksanaan }}</td>
                 <td class="d-xl-table-cell">{{ $d->tempat_pelaksanaan }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah_peserta }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah_produk }}</td>

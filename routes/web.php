@@ -55,21 +55,21 @@ Route::get('/data', function () {
     ]);
 });
 
-Route::get('/data-pengembangan', function () {
-    return view('data_pengembangan',[
-        "title" => "data pengembangan"
-    ]);
-});
+// Route::get('/data-pengembangan', function () {
+//     return view('data_pengembangan',[
+//         "title" => "data pengembangan"
+//     ]);
+// });
 
 Route::get('/data-pengembangan', [DataPengembanganController::class, 'data']);
 
-Route::get('/data-pengembangan', function () {
-    return view('data_pengembangan',[
-        "title" => "data pengembangan"
-    ]);
-});
+// Route::get('/data-pengembangan', function () {
+//     return view('data_pengembangan',[
+//         "title" => "data pengembangan"
+//     ]);
+// });
 
-Route::get('/form-Pemberdayaan', [DataPemberdayaanController::class, 'form']);
+Route::get('/form-pemberdayaan', [DataPemberdayaanController::class, 'form']);
 
 Route::get('/input-form', function () {
     return view('input',[
@@ -83,19 +83,19 @@ Route::get('/data', function () {
     ]);
 });
 
-Route::get('/data-pemberdayaan', function () {
-    return view('data_pemberdayaan',[
-        "title" => "data pemberdayaan"
-    ]);
-});
+// Route::get('/data-pemberdayaan', function () {
+//     return view('data_pemberdayaan',[
+//         "title" => "data pemberdayaan"
+//     ]);
+// });
 
 Route::get('/data-pemberdayaan', [DataPemberdayaanController::class, 'data']);
 
-Route::get('/data-pengembangan', function () {
-    return view('data_pengembangan',[
-        "title" => "data pengembangan"
-    ]);
-});
+// Route::get('/data-pengembangan', function () {
+//     return view('data_pengembangan',[
+//         "title" => "data pengembangan"
+//     ]);
+// });
 
 Route::get('/generate', function () {
     return view('generate',[
