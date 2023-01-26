@@ -31,6 +31,8 @@
               </tr>
             </thead>
             <tbody>
+            <?php $i = 1 ?>
+              @foreach ($data as $d)
               <tr>
                 <td class="d-xl-table-cell text-center">1</td>
                 <td class="d-xl-table-cell">Program Pengelolaan Pendidikan</td>
@@ -51,6 +53,7 @@
                   </div>
                 </td>
               </tr>
+              @endforeach
             </tbody>
           </table>
         </div>
