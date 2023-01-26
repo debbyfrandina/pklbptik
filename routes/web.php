@@ -39,13 +39,35 @@ Route::get('/form', function () {
 //     ]);
 // });
 
-Route::get('/form-pengembangan', function () {
-    return view('form_pengembangan',[
-        "title" => "form pengembangan"
+Route::get('/form-pengembangan', [DataPengembanganController::class, 'form']);
+
+Route::get('/input-form', function () {
+    return view('input',[
+        "title" => "Input_Form"
     ]);
 });
 
-Route::get('/form-pemberdayaan', [DataPemberdayaanController::class, 'form']);
+Route::get('/data', function () {
+    return view('data',[
+        "title" => "data"
+    ]);
+});
+
+Route::get('/data-pengembangan', function () {
+    return view('data_pengembangan',[
+        "title" => "data pengembangan"
+    ]);
+});
+
+Route::get('/data-pengembangan', [DataPengembanganController::class, 'data']);
+
+Route::get('/data-pengembangan', function () {
+    return view('data_pengembangan',[
+        "title" => "data pengembangan"
+    ]);
+});
+
+Route::get('/form-Pemberdayaan', [DataPemberdayaanController::class, 'form']);
 
 Route::get('/input-form', function () {
     return view('input',[
