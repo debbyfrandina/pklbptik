@@ -31,7 +31,7 @@
               </tr>
             </thead>
             <tbody>
-            <?php $i = 1 ?>
+              <?php $i = 1 ?>
               @foreach ($data as $d)
               <tr>
                 <td class="d-xl-table-cell text-center">{{ $i++ }}</td>

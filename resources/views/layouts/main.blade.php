@@ -206,7 +206,7 @@
 			<footer class="footer ">
 				<div class="container-fluid row text-muted text-start">
 					<p class="mb-0">
-						<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
+						<a class="text-muted" href="http://157.119.221.252" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
 					</p>
 				</div>
 			</footer>
