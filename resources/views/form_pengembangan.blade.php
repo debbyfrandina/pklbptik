@@ -25,6 +25,7 @@
               <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
               <th class="d-xl-table-cell">Jumlah Peserta</th>
               <th class="d-xl-table-cell">Jumlah Produk</th>
+              <th class="d-xl-table-cell">Tanggal Edit</th>
               <th class="d-xl-table-cell">Aksi</th>
             </tr>
           </thead>
@@ -59,7 +60,7 @@
   </div>
 
   <div class="d-flex justify-content-center mb-3">
-    <a class="btn btn-success btn-primary" href="/form/add">Tambah</a>
+    <a class="btn btn-success btn-primary" href="/form/ad">Tambah</a>
   </div>  
 
   {{-- form start --}}

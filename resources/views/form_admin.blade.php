@@ -49,11 +49,11 @@
   </div>
 
   <div class="d-flex justify-content-center mb-3">
-    <a class="btn btn-success btn-primary" href="/form/add">Tambah</a>
+    <a class="btn btn-success btn-primary" href="/input-tata-usaha">Tambah</a>
   </div>  
 
   {{-- form start --}}
-  <div class="mb-0">
+  {{-- <div class="mb-0">
     <h1 class="h3 d-inline align-middle">Forms</h1>
     <p class="badge bg-dark text-white ms-2">Semua kolom wajib diisi</p>
   </div>
@@ -109,6 +109,6 @@
      
 
     </div>
-  </div>  
+  </div>   --}}
 </div>
 @endsection

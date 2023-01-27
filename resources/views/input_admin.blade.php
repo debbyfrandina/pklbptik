@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.plain')
 
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
@@ -54,11 +54,9 @@
           </div><br>
         </div>
 
-        <div class="card-body"> 
-          <div class="d-flex justify-content-center mb-3">
-            <button class="btn btn-success btn-primary">SUBMIT</button>
-          </div>   
-        </div>
+        <div class="d-flex justify-content-center mb-3">
+          <a class="btn btn-success btn-primary" href="/form-tata-usaha">Submit</a>
+        </div>  
   
       </div>
     </div>

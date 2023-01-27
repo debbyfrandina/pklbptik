@@ -41,7 +41,9 @@ class DataPemberdayaanController extends Controller
      */
     public function create()
     {
-        //
+        return view('input_pemberdayaan',[
+            "title" => "Input Pemberdayaan"
+        ]);
     }
 
     /**

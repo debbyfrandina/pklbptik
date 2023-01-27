@@ -65,8 +65,8 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "form" ) ? 'active' : '' }}">
-							<a class="sidebar-link " href="/form">
+						<li class="sidebar-item {{ ($title === "Form Tata Usaha" ) ? 'active' : '' }}">
+							<a class="sidebar-link " href="/form-tata-usaha">
 								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data TU</span>
 							</a>
 						</li>
