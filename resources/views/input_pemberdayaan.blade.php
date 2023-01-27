@@ -33,27 +33,27 @@
       
         <div class="card-body">
           <h5 class="card-title mb-0">Outcome</h5><br>
-          <textarea class="form-control" rows="3" placeholder="Input outcome" required name=""></textarea>
+          <textarea class="form-control" rows="3" placeholder="Input outcome" required name="outcome"></textarea>
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Tanggal Pelaksaan</h5><br>
-          <input class="form-control" rows="1" placeholder="Input tanggal pelaksanaan" required></textarea>       
+          <input type="date" class="form-control" rows="1" placeholder="Input tanggal pelaksanaan" required name="tanggal_pelaksanaan"></textarea>       
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Tempat Pelaksanaan</h5><br>
-          <input class="form-control" rows="1" placeholder="Input tempat pelaksanaan" required></textarea>       
+          <input class="form-control" rows="1" placeholder="Input tempat pelaksanaan" required name="tempat_pelaksanaan"></textarea>       
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Jumlah Peserta</h5><br>
-          <input class="form-control" rows="1" placeholder="Input jumlah peserta" required></textarea>       
+          <input class="form-control" rows="1" placeholder="Input jumlah peserta" required name="jumlah_peserta"></textarea>       
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Jumlah Sekolah</h5><br>
-          <input class="form-control" rows="1" placeholder="Input jumlah sekolah" required></textarea>       
+          <input class="form-control" rows="1" placeholder="Input jumlah sekolah" required name="jumlah_sekolah"></textarea>       
         </div>
 
         <div class="card-body">
@@ -72,7 +72,7 @@
         </div>
 
         <div class="d-flex justify-content-center mb-3">
-          <a class="btn btn-success btn-primary" href="/form-pemberdayaan">Submit</a>
+          <button class="btn btn-success btn-primary" type="submit">Submit</button>
         </div>  
   
       </div>

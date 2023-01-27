@@ -9,34 +9,37 @@
 
 <div class="container-fluid p-0">
 
-  {{-- form start --}}
+  
   <div class="mb-0">
     <h1 class="h3 d-inline align-middle">Forms</h1>
     <p class="badge bg-dark text-white ms-2">Semua kolom wajib diisi</p>
   </div>
 
+  {{-- form start --}}
+  <form method="POST" action="/input-tata-usaha/submit">
+    @csrf
   <div class="row">
     <div class="col-2 col-lg-12">
       <div class="card">
 
         <div class="card-body">
           <h5 class="card-title mb-0">Nama Kegiatan</h5><br>
-          <input type="text" class="form-control" placeholder="Input nama kegiatan" required>
+          <input type="text" class="form-control" placeholder="Input nama kegiatan" required name="nama">
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Tujuan Kegiatan</h5><br>
-          <textarea class="form-control" rows="3" placeholder="Input tujuan kegiatan" required></textarea>
+          <textarea class="form-control" rows="3" placeholder="Input tujuan kegiatan" required name="tujuan"></textarea>
         </div>
       
         <div class="card-body">
           <h5 class="card-title mb-0">Outcome</h5><br>
-          <textarea class="form-control" rows="3" placeholder="Input outcome" required></textarea>
+          <textarea class="form-control" rows="3" placeholder="Input outcome" required name="outcome"></textarea>
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Jumlah</h5><br>
-          <input class="form-control" rows="1" placeholder="Input jumlah" required></textarea>       
+          <input class="form-control" rows="1" placeholder="Input jumlah" required name="jumlah"></textarea>       
         </div>
 
         <div class="card-body">

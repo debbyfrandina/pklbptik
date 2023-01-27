@@ -54,7 +54,21 @@ class DataPemberdayaanController extends Controller
      */
     public function store(StoreDataPemberdayaanRequest $request)
     {
-        //
+        $validatedData = $request->validate([
+            "nama_program" => ['required', 'string'],
+            "tujuan" => ['required', 'string'],
+            "outcome" => ['required', 'string'],
+            "tanggal_pelaksanaan" => ['required'],
+            "tempat_pelaksanaan" => ['required', 'string'],
+            "jumlah_peserta" => ['required'],
+            "jumlah_sekolah" => ['required'],
+        ]);
+
+        $validatedData['user_id'] = auth()->user()->id;
+
+        DataPemberdayaan::create($validatedData);
+
+        return redirect('/form-pemberdayaan');
     }
 
     /**

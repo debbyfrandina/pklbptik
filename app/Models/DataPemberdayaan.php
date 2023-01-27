@@ -19,8 +19,9 @@ class DataPemberdayaan extends Model
         'tujuan',
         'outcome',
         'tanggal_pelaksanaan',
-        'tempat_pelaksanaa',
+        'tempat_pelaksanaan',
         'jumlah_peserta',
         'jumlah_sekolah',
+        'user_id'
     ];
 }
