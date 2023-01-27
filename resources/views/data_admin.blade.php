@@ -29,22 +29,23 @@
               </tr>
             </thead>
             <tbody>
+              <?php $i = 1 ?>
+              @foreach ($data as $d)
               <tr>
-                <td class="d-xl-table-cell text-center">1</td>
-                <td class="d-xl-table-cell">Workshop SMAN 1</td>
-                <td class="d-xl-table-cell">memberikan sosialisasi pemanfaatan TIK pada murid di SMAN 1</td>
-                <td class="d-xl-table-cell">Murid dapat mengimplementasi pemanfaatan TIK pd pembelajaran</td>
-                <td class="d-xl-table-cell text-center">1000</td>
-                <td class="d-xl-table-cell text-center">01-01-01 23:59:59</td>
+                <td class="d-xl-table-cell text-center">{{ $i++ }}</td>
+                <td class="d-xl-table-cell">{{ $d->nama }}</td>
+                <td class="d-xl-table-cell">{{ $d->tujuan }}</td>
+                <td class="d-xl-table-cell">{{ $d->outcome }}</td>
+                <td class="d-xl-table-cell text-center">{{ $d->jumlah }}</td>
+                <td class="d-xl-table-cell text-center">{{ $d->update_at }}</td>
                 <td class="d-xl-table-cell text-center">Maharani Swas</td>
-                <td class="d-xl-table-cell text-center">
+                <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group btn-group-lg mb-3" role="group" aria-label="Default button group">
                     <a class="btn btn-info" href="#">Detail</a>
                   </div>
                 </td>
-                
               </tr>
-              
+              @endforeach
             </tbody>
           </table>
         </div>

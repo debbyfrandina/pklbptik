@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\DataPemberdayaanController;
 use App\Http\Controllers\DataPengembanganController;
 
@@ -29,25 +30,19 @@ Route::get('/test', function () {
     ]);
 });
 
-Route::get('/form-tata-usaha', function () {
-    return view('form_admin',[
-        "title" => "Form Tata Usaha"
-    ]);
-});
 
-// Route::get('/form-pemberdayaan', function () {
-//     return view('form_pemberdayaan',[
-//         "title" => "form pemberdayaan"
+//input
+Route::get('/input-pemberdayaan', [DataPemberdayaanController::class, 'create']);
+Route::post('/input-pemberdayaan/submit', [DataPemberdayaanController::class, 'store']);
+
+Route::get('/input-tata-usaha', [LaporanController::class, 'create']);
+Route::post('/input-tata-usaha/submit', [LaporanController::class, 'store']);
+
+// Route::get('/input-tata-usaha', function () {
+//     return view('input_admin',[
+//         "title" => "Input Tata Usaha"
 //     ]);
 // });
-
-Route::get('/form-pengembangan', [DataPengembanganController::class, 'form']);
-
-Route::get('/input-tata-usaha', function () {
-    return view('input_admin',[
-        "title" => "Input Tata Usaha"
-    ]);
-});
 
 Route::get('/input-pengembangan', function () {
     return view('input_pengembangan',[
@@ -55,63 +50,45 @@ Route::get('/input-pengembangan', function () {
     ]);
 });
 
-Route::get('/input-pemberdayaan', [DataPemberdayaanController::class, 'create']);
-Route::post('/input-pemberdayaan/submit', [DataPemberdayaanController::class, 'store']);
 
-Route::get('/data', function () {
-    return view('data',[
-        "title" => "data"
-    ]);
-});
-
-// Route::get('/data-pengembangan', function () {
-//     return view('data_pengembangan',[
-//         "title" => "data pengembangan"
-//     ]);
-// });
-
+//data
 Route::get('/data-pengembangan', [DataPengembanganController::class, 'data']);
+// Route::get('/data-pemberdayaan', [DataPemberdayaanController::class, 'data']);
+Route::get('/data-tata-usaha', [LaporanController::class, 'data']);
 
-// Route::get('/data-pengembangan', function () {
-//     return view('data_pengembangan',[
-//         "title" => "data pengembangan"
-//     ]);
-// });
 
+//form
+Route::get('/form-pengembangan', [DataPengembanganController::class, 'form']);
 Route::get('/form-pemberdayaan', [DataPemberdayaanController::class, 'form']);
+Route::get('/form-tata-usaha', [LaporanController::class, 'form']);
 
-Route::get('/input-form', function () {
-    return view('input',[
-        "title" => "Input_Form"
-    ]);
-});
 
-Route::get('/data', function () {
-    return view('data',[
-        "title" => "data"
-    ]);
-});
-
-// Route::get('/data-pemberdayaan', function () {
-//     return view('data_pemberdayaan',[
-//         "title" => "data pemberdayaan"
+// Route::get('/form-tata-usaha', function () {
+//     return view('form_admin',[
+//         "title" => "Form Tata Usaha"
 //     ]);
 // });
 
-Route::get('/data-pemberdayaan', [DataPemberdayaanController::class, 'data']);
-
-// Route::get('/data-pengembangan', function () {
-//     return view('data_pengembangan',[
-//         "title" => "data pengembangan"
+// Route::get('/input-form', function () {
+//     return view('input',[
+//         "title" => "Input_Form"
 //     ]);
 // });
+
+// Route::get('/data', function () {
+//     return view('data',[
+//         "title" => "data"
+//     ]);
+// });
+
+
+//login
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/generate', function () {
     return view('generate',[
         "title" => "generate"
     ]);
 });
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'authenticate']);
-
-Route::get('/logout', [LoginController::class, 'logout']);

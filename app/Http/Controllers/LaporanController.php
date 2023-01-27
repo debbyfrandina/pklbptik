@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Laporan;
 use App\Http\Requests\StoreLaporanRequest;
 use App\Http\Requests\UpdateLaporanRequest;
+use App\Http\Controllers\Controller;
 
 class LaporanController extends Controller
 {
@@ -13,9 +14,25 @@ class LaporanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function data()
     {
-        //
+        $laporan = Laporan::all();
+
+        return view('data_admin',[
+            "title" => "Data Tata Usaha",
+            "data" => $laporan
+        ]);
+    
+    }
+
+    public function form()
+    {
+        $laporan = Laporan::where('user_id','=', auth()->user()->id)->get();
+
+        return view('form_admin',[
+            "title" => "Form Tata Usaha",
+            "data" => $laporan
+        ]);
     }
 
     /**
@@ -25,18 +42,9 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreLaporanRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreLaporanRequest $request)
-    {
-        //
+        return view('input_admin',[
+            "title" => "Input Tata Usaha"
+        ]);
     }
 
     /**
