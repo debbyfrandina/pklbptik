@@ -48,6 +48,28 @@ class LaporanController extends Controller
     }
 
     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \App\Http\Requests\StoreLaporanRequest  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(StoreLaporanRequest $request)
+    {
+        $validatedData = $request->validate([
+            "nama" => ['required', 'string'],
+            "tujuan" => ['required', 'string'],
+            "outcome" => ['required', 'string'],
+            "jumlah" => ['required', 'integer'],
+        ]);
+
+        $validatedData['user_id'] = auth()->user()->id;
+
+        Laporan::create($validatedData);
+
+        return redirect('/form-tata-usaha');
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  \App\Models\Laporan  $laporan

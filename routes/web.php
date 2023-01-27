@@ -35,25 +35,16 @@ Route::get('/test', function () {
 Route::get('/input-pemberdayaan', [DataPemberdayaanController::class, 'create']);
 Route::post('/input-pemberdayaan/submit', [DataPemberdayaanController::class, 'store']);
 
+Route::get('/input-pengembangan', [DataPengembangaController::class, 'create']);
+Route::post('/input-pengembangan/submit', [DataPengembanganController::class, 'store']);
+
 Route::get('/input-tata-usaha', [LaporanController::class, 'create']);
 Route::post('/input-tata-usaha/submit', [LaporanController::class, 'store']);
-
-// Route::get('/input-tata-usaha', function () {
-//     return view('input_admin',[
-//         "title" => "Input Tata Usaha"
-//     ]);
-// });
-
-Route::get('/input-pengembangan', function () {
-    return view('input_pengembangan',[
-        "title" => "Input Pengembangan"
-    ]);
-});
 
 
 //data
 Route::get('/data-pengembangan', [DataPengembanganController::class, 'data']);
-// Route::get('/data-pemberdayaan', [DataPemberdayaanController::class, 'data']);
+Route::get('/data-pemberdayaan', [DataPemberdayaanController::class, 'data']);
 Route::get('/data-tata-usaha', [LaporanController::class, 'data']);
 
 
@@ -61,25 +52,6 @@ Route::get('/data-tata-usaha', [LaporanController::class, 'data']);
 Route::get('/form-pengembangan', [DataPengembanganController::class, 'form']);
 Route::get('/form-pemberdayaan', [DataPemberdayaanController::class, 'form']);
 Route::get('/form-tata-usaha', [LaporanController::class, 'form']);
-
-
-// Route::get('/form-tata-usaha', function () {
-//     return view('form_admin',[
-//         "title" => "Form Tata Usaha"
-//     ]);
-// });
-
-// Route::get('/input-form', function () {
-//     return view('input',[
-//         "title" => "Input_Form"
-//     ]);
-// });
-
-// Route::get('/data', function () {
-//     return view('data',[
-//         "title" => "data"
-//     ]);
-// });
 
 
 //login

@@ -58,10 +58,10 @@ class DataPemberdayaanController extends Controller
             "nama_program" => ['required', 'string'],
             "tujuan" => ['required', 'string'],
             "outcome" => ['required', 'string'],
-            "tanggal_pelaksanaan" => ['required'],
+            "tanggal_pelaksanaan" => ['required', 'date'],
             "tempat_pelaksanaan" => ['required', 'string'],
-            "jumlah_peserta" => ['required'],
-            "jumlah_sekolah" => ['required'],
+            "jumlah_peserta" => ['required', 'integer'],
+            "jumlah_sekolah" => ['required', 'integer'],
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
