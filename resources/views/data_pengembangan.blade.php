@@ -11,6 +11,12 @@
   <div class="container-fluid p-0">
     {{-- table start --}}
     <h1 class="h3 mb-3"><strong>Data</strong>Analytics</h1>
+    <div class="d-flex flex-row-reverse mb-3">
+          <form action="d-flex align-items-center" method="POST">
+              <input name="keyword" type="text" placeholder="Masukkan nama dan NIM" size="40" class="p-1 px-2">
+              <button class="btn btn-success" type="submit" name="cari">Search</button>
+          </form>
+    </div>
     <div class="row">
       <div class="table-full-width d-flex table-responsive">
         <div class="card flex-fill">
@@ -22,8 +28,8 @@
                 <th class="d-xl-table-cell">Nama Kegiatan</th>
                 <th class="d-xl-table-cell">Nama Sub Kegiatan</th>
                 <th class="d-xl-table-cell">Nama Sub Sub Kegiatan</th>
-                <th class="d-xl-table-cell">Tanggal Mulai Pelaksanaan</th>
-                <th class="d-xl-table-cell">Tanggal Selesai Pelaksanaan</th>
+                <th class="d-xl-table-cell">Tanggal Mulai </th>
+                <th class="d-xl-table-cell">Tanggal Selesai </th>
                 <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
                 <th class="d-xl-table-cell">Jumlah Peserta</th>
                 <th class="d-xl-table-cell">Jumlah Produk</th>
