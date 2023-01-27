@@ -43,9 +43,7 @@ class DataPengembanganController extends Controller
      */
     public function store(StoreDataPengembanganRequest $request)
     {
-        return view('input_pemberdayaan',[
-            "title" => "Input Pemberdayaan"
-        ]);
+        //
     }
 
     /**
