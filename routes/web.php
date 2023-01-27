@@ -35,7 +35,7 @@ Route::get('/test', function () {
 Route::get('/input-pemberdayaan', [DataPemberdayaanController::class, 'create']);
 Route::post('/input-pemberdayaan/submit', [DataPemberdayaanController::class, 'store']);
 
-Route::get('/input-pengembangan', [DataPengembangaController::class, 'create']);
+Route::get('/input-pengembangan', [DataPengembanganController::class, 'create']);
 Route::post('/input-pengembangan/submit', [DataPengembanganController::class, 'store']);
 
 Route::get('/input-tata-usaha', [LaporanController::class, 'create']);

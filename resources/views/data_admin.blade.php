@@ -37,7 +37,7 @@
                 <td class="d-xl-table-cell">{{ $d->tujuan }}</td>
                 <td class="d-xl-table-cell">{{ $d->outcome }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah }}</td>
-                <td class="d-xl-table-cell text-center">{{ $d->update_at }}</td>
+                <td class="d-xl-table-cell text-center">{{ $d->updated_at }}</td>
                 <td class="d-xl-table-cell text-center">Maharani Swas</td>
                 <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group btn-group-lg mb-3" role="group" aria-label="Default button group">

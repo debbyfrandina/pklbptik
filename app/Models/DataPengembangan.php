@@ -19,9 +19,11 @@ class DataPengembangan extends Model
         'nama_kegiatan',
         'nama_sub_kegiatan',
         'nama_sub_sub_kegiatan',
-        'tanggal_pelaksanaan',
+        'tanggal_mulai',
+        'tanggal_selesai',
         'tempat_pelaksanaan',
         'jumlah_peserta',
-        'jumlah_produk'
+        'jumlah_produk',
+        'user_id'
     ];
 }

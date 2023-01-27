@@ -18,7 +18,6 @@ class Laporan extends Model
         'tujuan',
         'outcome',
         'jumlah',
-        'update_at',
         'user_id'
     ];
 }

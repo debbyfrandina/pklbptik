@@ -22,7 +22,6 @@ class DataPemberdayaan extends Model
         'tempat_pelaksanaan',
         'jumlah_peserta',
         'jumlah_sekolah',
-        'update_at',
         'user_id'
     ];
 }

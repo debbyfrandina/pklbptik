@@ -41,7 +41,7 @@
                 <td class="d-xl-table-cell">{{ $d->tempat_pelaksanaan }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah_peserta }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah_sekolah }}</td>
-                <td class="d-xl-table-cell text-center">{{ $d->update_at }}</td>
+                <td class="d-xl-table-cell text-center">{{ $d->updated_at }}</td>
                 <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                     <a class="btn btn-info" href="#">Detail</a>

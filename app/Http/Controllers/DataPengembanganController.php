@@ -34,6 +34,17 @@ class DataPengembanganController extends Controller
         ]);
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('input_pengembangan', [
+            "title" => "Input Pengembangan"
+        ]);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -43,16 +54,17 @@ class DataPengembanganController extends Controller
      */
     public function store(StoreDataPengembanganRequest $request)
     {
+        // dd($request);
         $validatedData = $request->validate([
             "nama_program" => ['required', 'string'],
             "nama_kegiatan" => ['required', 'string'],
             "nama_sub_kegiatan" => ['required', 'string'],
             "nama_sub_sub_kegiatan" => ['required', 'string'],
-            "tanggal_pelaksanaan" => ['required'],
+            "tanggal_mulai" => ['required', 'date'],
+            "tanggal_selesai" => ['required', 'date'],
             "tempat_pelaksanaan" => ['required', 'string'],
-            "jumlah_peserta" => ['required'],
-            "jumlah_produk" => ['required'],
-            "update_at" => [],
+            "jumlah_peserta" => ['required', 'integer'],
+            "jumlah_produk" => ['required', 'integer'],
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -61,6 +73,7 @@ class DataPengembanganController extends Controller
 
         return redirect('/form-pengembangan');
     }
+
 
     /**
      * Display the specified resource.

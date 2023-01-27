@@ -22,7 +22,8 @@
                 <th class="d-xl-table-cell">Nama Kegiatan</th>
                 <th class="d-xl-table-cell">Nama Sub Kegiatan</th>
                 <th class="d-xl-table-cell">Nama Sub Sub Kegiatan</th>
-                <th class="d-xl-table-cell">Tanggal Pelaksanaan</th>
+                <th class="d-xl-table-cell">Tanggal Mulai Pelaksanaan</th>
+                <th class="d-xl-table-cell">Tanggal Selesai Pelaksanaan</th>
                 <th class="d-xl-table-cell">Tempat Pelaksanaan</th>
                 <th class="d-xl-table-cell">Jumlah Peserta</th>
                 <th class="d-xl-table-cell">Jumlah Produk</th>
@@ -39,11 +40,12 @@
                 <td class="d-xl-table-cell">{{ $d->nama_kegiatan }}</td>
                 <td class="d-xl-table-cell">{{ $d->nama_sub_kegiatan }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->nama_sub_sub_kegiatan }}</td>
-                <td class="d-xl-table-cell">{{ $d->tanggal_pelaksanaan }}</td>
+                <td class="d-xl-table-cell">{{ $d->tanggal_mulai }}</td>
+                <td class="d-xl-table-cell">{{ $d->tanggal_selesai }}</td>
                 <td class="d-xl-table-cell">{{ $d->tempat_pelaksanaan }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah_peserta }}</td>
                 <td class="d-xl-table-cell text-center">{{ $d->jumlah_produk }}</td>
-                <td class="d-xl-table-cell text-center">{{ $d->update_at }}</td>
+                <td class="d-xl-table-cell text-center">{{ $d->updated_at }}</td>
                 <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                     <a class="btn btn-info" href="#">Detail</a>
