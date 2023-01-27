@@ -12,7 +12,7 @@
 <div class="container-fluid p-0"> 
 
   {{-- form start --}}
-  {{-- <div class="mb-0">
+  <div class="mb-0">
     <h1 class="h3 d-inline align-middle">Forms</h1>
     <p class="badge bg-dark text-white ms-2">Semua kolom wajib diisi</p>
   </div>
