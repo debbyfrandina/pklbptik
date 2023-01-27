@@ -58,7 +58,7 @@
         </div>
 
         <div class="d-flex justify-content-center mb-3">
-          <a class="btn btn-success btn-primary" href="/form-tata-usaha">Submit</a>
+          <button class="btn btn-success btn-primary" type="submit">Submit</button>
         </div>  
   
       </div>
