@@ -28,7 +28,7 @@
 
         <div class="card-body">
           <h5 class="card-title mb-0">Nama Kegiatan</h5><br>
-          <textarea class="form-control" rows="3" placeholder="Input nama kegiatan" required></textarea>
+          <input class="form-control" rows="3" placeholder="Input nama kegiatan" required></textarea>
         </div>
 
         <div class="card-body">
@@ -53,17 +53,17 @@
 
         <div class="card-body">
           <h5 class="card-title mb-0">Tempat Pelaksanaan</h5><br>
-          <textarea class="form-control" rows="1" placeholder="Input tempat pelaksanaan" required></textarea>
+          <input class="form-control" rows="1" placeholder="Input tempat pelaksanaan" required></textarea>
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Jumlah Peserta</h5><br>
-          <textarea class="form-control" rows="1" placeholder="Input jumlah peserta" required></textarea>
+          <input class="form-control" rows="1" placeholder="Input jumlah peserta" required></textarea>
         </div>
 
         <div class="card-body">
           <h5 class="card-title mb-0">Jumlah Produk</h5><br>
-          <textarea class="form-control" rows="1" placeholder="Input jumlah produk" required></textarea>
+          <input class="form-control" rows="1" placeholder="Input jumlah produk" required></textarea>
         </div>
       
         <div class="card-body">
