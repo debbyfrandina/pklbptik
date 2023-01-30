@@ -60,12 +60,24 @@ class LaporanController extends Controller
             "tujuan" => ['required', 'string'],
             "outcome" => ['required', 'string'],
             "jumlah" => ['required', 'integer'],
+            "file_admin" => ['required', 'string'],
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
 
         Laporan::create($validatedData);
 
+        $input = $request->all();
+        if($request->hasFile('file_admin')){
+            // get original file name
+            $fileName = $request->file('file_admin')->getClientOriginalName();
+            // upload file
+            $request->file('file_admin')->storeAs('public/admin', $fileName);
+            $input['file_admin'] = $fileName;
+        }
+        // $laporan = Laporan::find($id);
+        // $laporan->update($input);
+        
         return redirect('/form-tata-usaha');
     }
 

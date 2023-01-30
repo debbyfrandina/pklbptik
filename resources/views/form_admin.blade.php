@@ -38,6 +38,7 @@
               <td class="d-xl-table-cell text-center nav-">
                 <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                   <a class="btn btn-info" href="#">Detail</a>
+                  {{-- <a href="storage/admin/{{$laporan->file_admin}}" target="_blank" class="btn btn-info">Check here</a> --}}
                   <a class="btn btn-warning" href="#">Edit</a>
                   <a class="btn btn-danger" href="#">Delete</a>
                 </div>

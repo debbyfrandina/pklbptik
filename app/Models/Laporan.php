@@ -19,6 +19,7 @@ class Laporan extends Model
         'tujuan',
         'outcome',
         'jumlah',
+        'file_admin',
         'user_id'
     ];
 
