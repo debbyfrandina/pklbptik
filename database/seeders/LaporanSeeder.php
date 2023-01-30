@@ -21,6 +21,7 @@ class LaporanSeeder extends Seeder
                 'tujuan' => 'Pelatihan ABC pada DEF',
                 'outcome' => 'Surat perintah tugas pelatihan ABC',
                 'jumlah' => '3',
+                'file_admin' => 'file',
                 'user_id' => '1',
             ],
         ]);

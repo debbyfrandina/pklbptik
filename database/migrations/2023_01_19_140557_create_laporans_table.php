@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('tujuan');
             $table->string('outcome');
             $table->integer('jumlah');
-            // $table->string('file_admin');
+            $table->string('file_admin');
             $table->foreignId('user_id');
         });
     }
