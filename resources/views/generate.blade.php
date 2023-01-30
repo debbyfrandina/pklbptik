@@ -19,23 +19,28 @@
         <div class="card">
 
           <div class="card-body">
-            <h5 class="card-title mb-0">NIP</h5><br>
-            <input type="text" class="form-control" placeholder="Input NIP" required>
+            <h5 class="card-title mb-0">Nama Lengkap</h5><br>
+            <input type="text" class="form-control" placeholder="Input nama lengkap" required name="nama">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title mb-0">Email</h5><br>
+            <input type="text" class="form-control" placeholder="Input email" required name="email">
           </div>
 
           <div class="card-body">
             <h5 class="card-title mb-0">Password</h5><br>
-            <input type="text" class="form-control" rows="3" placeholder="Input Password" required></textarea>
+            <input type="text" class="form-control" rows="3" placeholder="Input Password" required name="password"></textarea>
           </div>
         
           <div class="card-body">
             <h5 class="card-title mb-0">Konfirmasi Password</h5><br>
-            <input type="text" class="form-control" rows="3" placeholder="Ulangi Password" required></textarea>
+            <input type="text" class="form-control" rows="3" placeholder="Ulangi Password" required name="password"></textarea>
           </div>
 
           <div class="card-body">
             <h5 class="card-title mb-0">Jabatan</h5><br>
-            <select class="form-select mb-3">
+            <select class="form-select mb-3" name="jabatan">
                 <option value='' selected disabled>--Pilih Jabatan--</option>
                 <option value='admin'>Admin</option>
                 <option value='pengembangan'>Sie Pengembangan</option>

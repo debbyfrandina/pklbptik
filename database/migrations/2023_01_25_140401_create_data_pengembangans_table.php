@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('tempat_pelaksanaan');
             $table->integer('jumlah_peserta');
             $table->integer('jumlah_produk');
-            // $table->integer('berkas');
+            // $table->string('file_pengembangan');
             $table->foreignId('user_id');
         });
     }
