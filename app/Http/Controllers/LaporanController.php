@@ -17,22 +17,38 @@ class LaporanController extends Controller
      */
     public function data()
     {
-        $laporan = Laporan::all();
+        $laporan = Laporan::join('users', 'user_id', '=', 'users.id');
+
+        if (request('keyword')) {
+            $laporan->where('users.nama', 'like', '%' . request('keyword') . '%')
+            ->orWhere('laporans.nama', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tujuan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('outcome', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah', 'like', '%' . request('keyword') . '%')
+            ->orWhere('outcome', 'like', '%' . request('keyword') . '%');
+        }
 
         return view('data_admin',[
             "title" => "Data Tata Usaha",
-            "data" => $laporan
+            "data" => $laporan->get(['laporans.*', 'users.nama AS username'])
         ]);
-    
     }
 
     public function form()
     {
-        $laporan = Laporan::where('user_id','=', auth()->user()->id)->get();
+        $laporan = Laporan::where('user_id','=', auth()->user()->id);
+
+        if (request('keyword')) {
+            $laporan->Where('nama', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tujuan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('outcome', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah', 'like', '%' . request('keyword') . '%')
+            ->orWhere('outcome', 'like', '%' . request('keyword') . '%');
+        }
 
         return view('form_admin',[
             "title" => "Form Tata Usaha",
-            "data" => $laporan
+            "data" => $laporan->get()
         ]);
     }
 

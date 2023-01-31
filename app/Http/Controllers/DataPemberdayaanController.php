@@ -16,21 +16,42 @@ class DataPemberdayaanController extends Controller
      */
     public function data()
     {
-        $data_pemberdayaan = DataPemberdayaan::all();
+        $data_pemberdayaan = DataPemberdayaan::join('users', 'user_id', '=', 'users.id');
+
+        if (request('keyword')) {
+            $data_pemberdayaan->where('nama', 'like', '%' . request('keyword') . '%')
+            ->orwhere('nama_program', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tujuan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('outcome', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tanggal_pelaksanaan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tempat_pelaksanaan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_peserta', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_sekolah', 'like', '%' . request('keyword') . '%');
+        }
 
         return view('data_pemberdayaan',[
             "title" => "Data Pemberdayaan",
-            "data" => $data_pemberdayaan
+            "data" => $data_pemberdayaan->get(['data_pemberdayaans.*', 'users.nama AS username'])
         ]);
     }
 
     public function form()
     {
-        $data_pemberdayaan = DataPemberdayaan::where('user_id','=', auth()->user()->id)->get();
+        $data_pemberdayaan = DataPemberdayaan::where('user_id','=', auth()->user()->id);
+
+        if (request('keyword')) {
+            $data_pemberdayaan->where('nama_program', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tujuan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('outcome', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tanggal_pelaksanaan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tempat_pelaksanaan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_peserta', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_sekolah', 'like', '%' . request('keyword') . '%');
+        }
 
         return view('form_pemberdayaan',[
             "title" => "Form Pemberdayaan",
-            "data" => $data_pemberdayaan
+            "data" => $data_pemberdayaan->get()
         ]);
     }
 

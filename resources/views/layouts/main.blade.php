@@ -71,7 +71,7 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "data" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Data Tata Usaha" ) ? 'active' : '' }}">
 							<a class="sidebar-link" href="/data-tata-usaha">
 								<i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Tata Usaha</span>
 							</a>

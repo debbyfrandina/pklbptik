@@ -15,7 +15,15 @@
     </div>  
   </div>
   
-  {{-- table hehehe start --}}
+  {{-- search start --}}
+  <div class="d-flex flex-row-reverse mb-3">
+    <form >
+      <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
+      <button class="btn btn-success" type="submit">Search</button>
+    </form>
+  </div>
+
+  {{-- table start --}}
   <div class="row">
     <div class="table-full-width d-flex">
       <div class="card flex-fill">

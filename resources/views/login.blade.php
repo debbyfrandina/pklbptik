@@ -36,7 +36,7 @@
 									
 									<div class="text-center mt-4">
 										<h1 class="h2">REPORT DATA BPTIK DIKBUD JATENG</h1>
-										<p class="lead">Silahkan masukkan NIP dan Password</p>
+										<p class="lead">Silahkan masukkan Email dan Password</p>
 									</div>
 
 									<form action="/login" method="POST">

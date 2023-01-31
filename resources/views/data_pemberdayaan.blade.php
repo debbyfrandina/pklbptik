@@ -12,9 +12,9 @@
     {{-- table start --}}
     <h1 class="h3 mb-3"><strong>Data</strong>Analytics</h1>
     <div class="d-flex flex-row-reverse mb-3">
-      <form action="d-flex align-items-center" method="POST">
-          <input name="keyword" type="text" placeholder="Masukkan nama dan NIM" size="40" class="p-1 px-2">
-          <button class="btn btn-success" type="submit" name="cari">Search</button>
+      <form >
+        <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
+        <button class="btn btn-success" type="submit">Search</button>
       </form>
     </div>
     <div class="row">

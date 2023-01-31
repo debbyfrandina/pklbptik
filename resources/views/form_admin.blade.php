@@ -8,8 +8,17 @@
 </nav>
 
 <div class="container-fluid p-0">
-  {{-- table hehehe start --}}
   <h1 class="h3 mb-3"><strong>Data</strong>Form</h1>
+  
+  {{-- search start --}}
+  <div class="d-flex flex-row-reverse mb-3">
+    <form >
+      <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
+      <button class="btn btn-success" type="submit">Search</button>
+    </form>
+  </div>
+  
+  {{-- table start --}}
   <div class="row">
     <div class="table-full-width d-flex">
       <div class="card flex-fill">

@@ -16,21 +16,46 @@ class DataPengembanganController extends Controller
      */
     public function data()
     {
-        $data_pengembangan = DataPengembangan::all();
+        $data_pengembangan = DataPengembangan::join('users', 'user_id', '=', 'users.id');
+
+        if (request('keyword')) {
+            $data_pengembangan->where('users.nama', 'like', '%' . request('keyword') . '%')
+            ->orwhere('nama_program', 'like', '%' . request('keyword') . '%')
+            ->orWhere('nama_kegiatan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('nama_sub_kegiatan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('nama_sub_sub_kegiatan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tanggal_mulai', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tanggal_selesai', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tempat_pelaksanaan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_peserta', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_produk', 'like', '%' . request('keyword') . '%');
+        }
+        
 
         return view('data_pengembangan',[
             "title" => "Data Pengembangan",
-            "data" => $data_pengembangan
+            "data" => $data_pengembangan->get(['data_pengembangans.*', 'users.nama AS username'])
         ]);
     }
 
     public function form()
     {
-        $data_pengembangan = DataPengembangan::where('user_id','=', auth()->user()->id)->get();
-
+        $data_pengembangan = DataPengembangan::where('user_id','=', auth()->user()->id);
+        
+        if (request('keyword')) {
+            $data_pengembangan->where('nama_program', 'like', '%' . request('keyword') . '%')
+            ->orWhere('nama_kegiatan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('nama_sub_kegiatan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('nama_sub_sub_kegiatan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tanggal_mulai', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tanggal_selesai', 'like', '%' . request('keyword') . '%')
+            ->orWhere('tempat_pelaksanaan', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_peserta', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jumlah_produk', 'like', '%' . request('keyword') . '%');
+        }
         return view('form_pengembangan',[
             "title" => "Form Pengembangan",
-            "data" => $data_pengembangan
+            "data" => $data_pengembangan->get()
         ]);
     }
 
