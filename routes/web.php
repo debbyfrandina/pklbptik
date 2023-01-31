@@ -34,6 +34,12 @@ Route::post('/input-pengembangan/submit', [DataPengembanganController::class, 's
 Route::get('/input-tata-usaha', [LaporanController::class, 'create']);
 Route::post('/input-tata-usaha/submit', [LaporanController::class, 'store']);
 
+//edit
+Route::get('/edit-admin', function () {
+    return view('edit_admin',[
+        "title" => "Edit Tata Usaha"
+    ]);
+});
 
 //data
 Route::get('/data-pengembangan', [DataPengembanganController::class, 'data']);
@@ -45,6 +51,11 @@ Route::get('/data-tata-usaha', [LaporanController::class, 'data']);
 Route::get('/form-pengembangan', [DataPengembanganController::class, 'form']);
 Route::get('/form-pemberdayaan', [DataPemberdayaanController::class, 'form']);
 Route::get('/form-tata-usaha', [LaporanController::class, 'form']);
+
+//form-delete
+Route::delete('/form-pengembangan/{id}', [DataPengembanganController::class, 'destroy']);
+Route::delete('/form-pemberdayaan/{id}', [DataPemberdayaanController::class, 'destroy']);
+Route::delete('/form-tata-usaha/{id}', [LaporanController::class, 'destroy']);
 
 
 //login

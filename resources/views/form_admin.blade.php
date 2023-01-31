@@ -47,8 +47,12 @@
               <td class="d-xl-table-cell text-center nav-">
                 <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                   <a href="storage/admin/{{$d->file_admin}}" class="btn btn-info" target="_blank">Detail</a>
-                  <a class="btn btn-warning" href="#">Edit</a>
-                  <a class="btn btn-danger" href="#">Delete</a>
+                  <a class="btn btn-warning" href="/edit-admin">Edit</a>
+                  <form action="/form-tata-usaha/{{ $d->id }}" method="post" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                  </form>
                 </div>
               </td>
             </tr>

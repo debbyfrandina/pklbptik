@@ -59,7 +59,11 @@
                 <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                   <a href="storage/pemberdayaan/{{$d->file_pemberdayaan}}" class="btn btn-info" target="_blank">Detail</a>
                   <a class="btn btn-warning" href="#">Edit</a>
-                  <a class="btn btn-danger" href="#">Delete</a>
+                  <form action="/form-pemberdayaan/{{ $d->id }}" method="post" class="d-inline">
+                    @method('delete')
+                    @csrf
+                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                  </form>
                 </div>
               </td>
             </tr>

@@ -72,13 +72,13 @@ class LaporanController extends Controller
      */
     public function store(StoreLaporanRequest $request)
     {
-        // $validatedData = $request->validate([
-        //     "nama" => ['required', 'string'],
-        //     "tujuan" => ['required', 'string'],
-        //     "outcome" => ['required', 'string'],
-        //     "jumlah" => ['required', 'integer'],
-        //     // "file_admin" => ['required', 'string'],
-        // ]);
+        $validatedData = $request->validate([
+            "nama" => ['required', 'string'],
+            "tujuan" => ['required', 'string'],
+            "outcome" => ['required', 'string'],
+            "jumlah" => ['required', 'integer'],
+            "file_admin" => ['required'],
+        ]);
         // Laporan::create($validatedData);
         // $laporan = Laporan::find($request->id);
         
@@ -120,7 +120,7 @@ class LaporanController extends Controller
      */
     public function edit(Laporan $laporan)
     {
-        //
+       ///
     }
 
     /**
@@ -141,8 +141,20 @@ class LaporanController extends Controller
      * @param  \App\Models\Laporan  $laporan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Laporan $laporan)
+    
+     public function destroy(Laporan $laporan)
     {
-        //
+        $id = request('id');
+        Laporan::destroy($id);
+        return redirect('/form-tata-usaha')->with('success', 'Data berhasil dihapus');
     }
+    
+    // public function destroy($id)
+    // {
+    //     $laporan = Laporans::find($id);
+
+    //     $laporan->delete();
+
+    //     return redirect('/form-tata-usaha')->with('success', 'Data berhasil dihapus');
+    // }
 }

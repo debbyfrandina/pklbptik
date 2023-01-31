@@ -1,4 +1,4 @@
-@extends('layouts.input')
+@extends('layouts.edit')
 
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
@@ -16,7 +16,7 @@
   </div>
 
   {{-- form start --}}
-  <form method="POST" action="/input-tata-usaha/submit" enctype="multipart/form-data">
+  <form method="POST" action="/edit-tata-usaha/submit" enctype="multipart/form-data">
     @csrf
   <div class="row">
     <div class="col-2 col-lg-12">

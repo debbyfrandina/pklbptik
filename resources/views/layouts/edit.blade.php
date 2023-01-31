@@ -58,9 +58,9 @@
 				
 					@if (auth()->user()->jabatan_id == 1)
 					<ul class="sidebar-nav">
-						<li class="sidebar-item {{ ($title === "Input Tata Usaha" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Edit Tata Usaha" ) ? 'active' : '' }}">
 							<a class="sidebar-link " href="#">
-								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Input</span>
+								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Edit</span>
 							</a>
 						</li>
 
@@ -73,9 +73,9 @@
 
 					@elseif (auth()->user()->jabatan_id == 2)
 					<ul class="sidebar-nav">
-						<li class="sidebar-item {{ ($title === "Input Pengembangan" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Edit Pengembangan" ) ? 'active' : '' }}">
 							<a class="sidebar-link " href="#">
-								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Input</span>
+								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Edit</span>
 							</a>
 						</li>
 
@@ -88,9 +88,9 @@
           
 					@elseif (auth()->user()->jabatan_id == 3)
 					<ul class="sidebar-nav">
-						<li class="sidebar-item {{ ($title === "Input Pemberdayaan" ) ? 'active' : '' }}">
+						<li class="sidebar-item {{ ($title === "Edit Pemberdayaan" ) ? 'active' : '' }}">
 							<a class="sidebar-link " href="#">
-								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Input</span>
+								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Edit</span>
 							</a>
 						</li>
 
@@ -114,7 +114,7 @@
 				@yield('container')
 			</div>
 			
-			<footer class="footer ">
+			<footer class="footer mt-auto">
 				<div class="container-fluid row text-muted text-start">
 					<p class="mb-0">
 						<a class="text-muted" href="http://157.119.221.252" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;

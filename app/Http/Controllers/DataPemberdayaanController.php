@@ -148,6 +148,8 @@ class DataPemberdayaanController extends Controller
      */
     public function destroy(DataPemberdayaan $dataPemberdayaan)
     {
-        //
+        $id = request('id');
+        DataPemberdayaan::destroy($id);
+        return redirect('/form-pemberdayaan')->with('success', 'Data berhasil dihapus');
     }
 }

@@ -156,6 +156,8 @@ class DataPengembanganController extends Controller
      */
     public function destroy(DataPengembangan $dataPengembangan)
     {
-        //
+        $id = request('id');
+        DataPengembangan::destroy($id);
+        return redirect('/form-pengembangan')->with('success', 'Data berhasil dihapus');
     }
 }

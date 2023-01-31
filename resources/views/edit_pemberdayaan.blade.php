@@ -1,4 +1,4 @@
-@extends('layouts.input')
+@extends('layouts.edit')
 
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
@@ -7,7 +7,7 @@
   </div>
 </nav>
 
-<form method="POST" action="/input-pemberdayaan/submit" enctype="multipart/form-data">
+<form method="POST" action="/edit-pemberdayaan/submit" enctype="multipart/form-data">
   @csrf
 <div class="container-fluid p-0">
   

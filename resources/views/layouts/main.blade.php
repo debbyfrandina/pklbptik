@@ -197,13 +197,14 @@
 			</div>
 		</nav>
 
-		<div class="main">
+		<div class="main d-flex flex-column min-vh-100">
 			<!-- content start -->
 			<div class="container">
 				@yield('container')
 			</div>
 			
-			<footer class="footer ">
+			
+			<footer class="footer mt-auto">
 				<div class="container-fluid row text-muted text-start">
 					<p class="mb-0">
 						<a class="text-muted" href="http://157.119.221.252" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
