@@ -24,13 +24,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/test', function () {
-    return view('test',[
-        "title" => "test"
-    ]);
-});
-
-
 //input
 Route::get('/input-pemberdayaan', [DataPemberdayaanController::class, 'create']);
 Route::post('/input-pemberdayaan/submit', [DataPemberdayaanController::class, 'store']);

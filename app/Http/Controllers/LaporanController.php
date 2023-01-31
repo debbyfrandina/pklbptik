@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan;
+use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Model;
 use App\Http\Requests\StoreLaporanRequest;
 use App\Http\Requests\UpdateLaporanRequest;
-use App\Http\Controllers\Controller;
 
 class LaporanController extends Controller
 {
@@ -55,18 +56,20 @@ class LaporanController extends Controller
      */
     public function store(StoreLaporanRequest $request)
     {
-        $validatedData = $request->validate([
-            "nama" => ['required', 'string'],
-            "tujuan" => ['required', 'string'],
-            "outcome" => ['required', 'string'],
-            "jumlah" => ['required', 'integer'],
-            "file_admin" => ['required', 'string'],
-        ]);
+        // $validatedData = $request->validate([
+        //     "nama" => ['required', 'string'],
+        //     "tujuan" => ['required', 'string'],
+        //     "outcome" => ['required', 'string'],
+        //     "jumlah" => ['required', 'integer'],
+        //     // "file_admin" => ['required', 'string'],
+        // ]);
 
-        $validatedData['user_id'] = auth()->user()->id;
+        
 
-        Laporan::create($validatedData);
-
+        // Laporan::create($validatedData);
+        
+        // $laporan = Laporan::find($request->id);
+        
         $input = $request->all();
         if($request->hasFile('file_admin')){
             // get original file name
@@ -75,10 +78,13 @@ class LaporanController extends Controller
             $request->file('file_admin')->storeAs('public/admin', $fileName);
             $input['file_admin'] = $fileName;
         }
-        // $laporan = Laporan::find($id);
-        // $laporan->update($input);
         
-        return redirect('/form-tata-usaha');
+        $input['user_id'] = auth()->user()->id;
+
+        // $input['file_admin'] = $laporan->file_admin;
+        Laporan::create($input);
+
+        return redirect('/form-tata-usaha')->with('succes', 'Data berhasil dimasukkan');
     }
 
     /**
