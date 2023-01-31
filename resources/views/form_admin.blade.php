@@ -37,11 +37,7 @@
               <td class="d-xl-table-cell text-center">{{ $d->updated_at }}</td>
               <td class="d-xl-table-cell text-center nav-">
                 <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
-                  <a class="btn btn-info" href="#">Detail</a>
-                  <a href="storage/admin/{{$d->file_admin}}" class="btn btn-info" target="_blank" class="col-sm-9">Check here</a>
-                  {{-- <a href="{{$d->file_admin}}" target="_blank" class="btn btn-info">Check here</a> --}}
-                  {{-- src="{{ url('/data_file/'.$g->file) }} --}}
-                  {{-- <a class="btn btn-info" href="{{ asset($laporan->file_admin) }}">Download File</a> --}}
+                  <a href="storage/admin/{{$d->file_admin}}" class="btn btn-info" target="_blank">Detail</a>
                   <a class="btn btn-warning" href="#">Edit</a>
                   <a class="btn btn-danger" href="#">Delete</a>
                 </div>

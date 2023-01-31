@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('tempat_pelaksanaan');
             $table->integer('jumlah_peserta');
             $table->integer('jumlah_sekolah');
-            // $table->string('file_pemberdayaan');
+            $table->string('file_pemberdayaan');
             $table->foreignId('user_id');
         });
     }

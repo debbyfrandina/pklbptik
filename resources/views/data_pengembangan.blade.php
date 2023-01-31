@@ -54,7 +54,7 @@
                 <td class="d-xl-table-cell text-center">{{ $d->updated_at }}</td>
                 <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
-                    <a class="btn btn-info" href="#">Detail</a>
+                    <a href="storage/pengembangan/{{$d->file_pengembangan}}" class="btn btn-info" target="_blank">Detail</a>
                   </div>
                 </td>
               </tr>

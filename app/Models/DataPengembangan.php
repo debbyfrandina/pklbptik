@@ -25,6 +25,7 @@ class DataPengembangan extends Model
         'tempat_pelaksanaan',
         'jumlah_peserta',
         'jumlah_produk',
+        'file_pengembangan',
         'user_id'
     ];
 

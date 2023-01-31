@@ -54,21 +54,35 @@ class DataPemberdayaanController extends Controller
      */
     public function store(StoreDataPemberdayaanRequest $request)
     {
-        $validatedData = $request->validate([
-            "nama_program" => ['required', 'string'],
-            "tujuan" => ['required', 'string'],
-            "outcome" => ['required', 'string'],
-            "tanggal_pelaksanaan" => ['required', 'date'],
-            "tempat_pelaksanaan" => ['required', 'string'],
-            "jumlah_peserta" => ['required', 'integer'],
-            "jumlah_sekolah" => ['required', 'integer'],
-        ]);
+        // $validatedData = $request->validate([
+        //     "nama_program" => ['required', 'string'],
+        //     "tujuan" => ['required', 'string'],
+        //     "outcome" => ['required', 'string'],
+        //     "tanggal_pelaksanaan" => ['required', 'date'],
+        //     "tempat_pelaksanaan" => ['required', 'string'],
+        //     "jumlah_peserta" => ['required', 'integer'],
+        //     "jumlah_sekolah" => ['required', 'integer'],
+        // ]);
 
-        $validatedData['user_id'] = auth()->user()->id;
+        // $validatedData['user_id'] = auth()->user()->id;
 
-        DataPemberdayaan::create($validatedData);
+        // DataPemberdayaan::create($validatedData);
 
-        return redirect('/form-pemberdayaan');
+        $input = $request->all();
+        if($request->hasFile('file_pemberdayaan')){
+            // get original file name
+            $fileName = $request->file('file_pemberdayaan')->getClientOriginalName();
+            // upload file
+            $request->file('file_pemberdayaan')->storeAs('public/pemberdayaan', $fileName);
+            $input['file_pemberdayaan'] = $fileName;
+        }
+
+        $input['user_id'] = auth()->user()->id;
+        
+        DataPemberdayaan::create($input);
+    
+
+        return redirect('/form-pemberdayaan')->with('success', 'Data berhasil dimasukkan');
     }
 
     /**

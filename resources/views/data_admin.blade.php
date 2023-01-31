@@ -47,7 +47,7 @@
                 <td class="d-xl-table-cell text-center">{{ $d->user->nama }}</td>
                 <td class="d-xl-table-cell text-center nav-">
                   <div class="btn-group btn-group-lg mb-3" role="group" aria-label="Default button group">
-                    <a class="btn btn-info" href="#">Detail</a>
+                    <a href="storage/admin/{{$d->file_admin}}" class="btn btn-info" target="_blank">Detail</a>
                   </div>
                 </td>
               </tr>

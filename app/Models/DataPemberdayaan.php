@@ -23,6 +23,7 @@ class DataPemberdayaan extends Model
         'tempat_pelaksanaan',
         'jumlah_peserta',
         'jumlah_sekolah',
+        'file_pemberdayaan',
         'user_id'
     ];
 
