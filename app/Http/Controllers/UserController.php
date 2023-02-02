@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 
 class UserController extends Controller
 {
@@ -15,9 +18,16 @@ class UserController extends Controller
     public function index()
     {
         $user = User::join('jabatans', 'jabatan_id', '=', 'jabatans.id');
+
+        if (request('keyword')){
+            $user->where('users.nama', 'like', '%' . request('keyword') . '%')
+            ->orWhere('email', 'like', '%' . request('keyword') . '%')
+            ->orWhere('jabatans.nama', 'like', '%' . request('keyword') . '%');
+        }
+
         return view('generate.list_akun',[
             "title" => "List Akun",
-            "data" => $user
+            "data" => $user->get(['users.*', 'jabatans.nama AS username'])
         ]);
     }
 
@@ -28,7 +38,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('generate.input',[
+            "title" => "Generate Akun"
+        ]);
     }
 
     /**
@@ -39,7 +51,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            "nama" => ['required', 'string'],
+            "email" => ['required', 'string'],
+            "password" => ['required', 'string'],
+            "jabatan_id" => ['required', 'integer'],
+        ]);
+        
+        // Set the generated password
+        $validatedData['password'] = bcrypt($validatedData['password']);
+        
+        // Create user
+        User::create($validatedData);
+
+        return redirect('/list-akun')->with('succes', 'Data berhasil dimasukkan');
     }
 
     /**
@@ -84,6 +109,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $id = request('id');
+        User::destroy($id);
+        return redirect('/list-akun')->with('success', 'Data berhasil dihapus');
     }
 }

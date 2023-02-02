@@ -45,33 +45,15 @@
 				</div>
 				
         <ul class="sidebar-nav">
-          <li class="sidebar-item {{ ($title === "dashboard" ) ? 'active' : '' }}">
-            <a class="sidebar-link " href="/">
-              <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Dashboard</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item {{ ($title === "Form Tata Usaha" ) ? 'active' : '' }}">
-            <a class="sidebar-link " href="/form-tata-usaha">
-              <i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data TU</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item {{ ($title === "Data Tata Usaha" ) ? 'active' : '' }}">
-            <a class="sidebar-link" href="/data-tata-usaha">
-              <i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Tata Usaha</span>
+          <li class="sidebar-item {{ ($title === "Generate Akun" ) ? 'active' : '' }}">
+            <a class="sidebar-link " href="/generate-akun">
+              <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Generate Akun</span>
             </a>
           </li>
 
           <li class="sidebar-item {{ ($title === "List Akun" ) ? 'active' : '' }}">
-            <a class="sidebar-link" href="/list-akun">
-              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Generate Akun</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="/logout">
-              <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
+            <a class="sidebar-link " href="/list-akun">
+              <i class="align-middle " data-feather="log-out"></i> <span class="align-middle">Kembali</span>
             </a>
           </li>
         </ul>
@@ -91,21 +73,16 @@
       <!-- main start -->
       <div class="main">
         <div class="container">  
-          <nav class="navbar navbar-expand navbar-light navbar-bg mb-3 justify-content-between">
-            <div class="navbar-collapse collapse">
-              <h2><strong>Form Tata Usaha</strong></h2>
+          <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
+            <div class="navbar-collapse collapse text-center">
+              <h1 class="font-weight-bold text-uppercase">Generate Akun</h1>
             </div>
-            <!--search start -->
-            <div class="d-flex flex-row-reverse">
-              <form >
-                <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>    
+          </nav>   
 
           <div class="container-fluid p-0">          
           {{-- table start --}}
+          <form method="POST" action="/generate-akun/submit" >
+            @csrf
           <div class="row">
             <div class="col-2 col-lg-12">
               <div class="card">
@@ -117,27 +94,22 @@
       
                 <div class="card-body">
                   <h5 class="card-title mb-0">Email</h5><br>
-                  <input type="text" class="form-control" placeholder="Input email" required name="email">
+                  <input type="email" class="form-control" placeholder="Input email" required name="email">
                 </div>
       
                 <div class="card-body">
                   <h5 class="card-title mb-0">Password</h5><br>
                   <input type="text" class="form-control" rows="3" placeholder="Input Password" required name="password"></textarea>
                 </div>
-              
-                <div class="card-body">
-                  <h5 class="card-title mb-0">Konfirmasi Password</h5><br>
-                  <input type="text" class="form-control" rows="3" placeholder="Ulangi Password" required name="password"></textarea>
-                </div>
       
                 <div class="card-body">
                   <h5 class="card-title mb-0">Jabatan</h5><br>
-                  <select class="form-select mb-3" name="jabatan">
+                  <select class="form-select mb-3" name="jabatan_id">
                       <option value='' selected disabled>--Pilih Jabatan--</option>
-                      <option value='admin'>Admin</option>
-                      <option value='pengembangan'>Sie Pengembangan</option>
-                      <option value='pemberdayaan'>Sie Pemberdayaan</option>
-                      <option value='pimpinan'>Pimpinan</option>
+                      <option value='1'>Admin</option>
+                      <option value='2'>Sie Pengembangan</option>
+                      <option value='3'>Sie Pemberdayaan</option>
+                      <option value='4'>Pimpinan</option>
                   </select>
               </div>
               <div class="d-flex justify-content-center mb-4">
@@ -147,16 +119,16 @@
           </div>
         </div>
 			</div>
-			
-      <!-- footer start -->
-			<footer class="footer mt-auto">
-				<div class="container-fluid row text-muted text-start">
-					<p class="mb-0">
-						<a class="text-muted" href="http://157.119.221.252" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
-					</p>
-				</div>
-			</footer>
 		</div>		
+			
+    <!-- footer start -->
+    <footer class="footer mt-auto">
+      <div class="container-fluid row text-muted text-start">
+        <p class="mb-0">
+          <a class="text-muted" href="http://157.119.221.252" target="_blank"><strong>BPTIK DIKBUD JATENG</strong></a> &copy;
+        </p>
+      </div>
+    </footer>
 	</div>	
 	
 

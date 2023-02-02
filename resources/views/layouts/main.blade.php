@@ -36,19 +36,19 @@
 					<div>
 						<div class="d-flex align-items-center ms-4 mb-4">
 							<div class="position-relative">
-								<img class="rounded-circle" src="img/avatars/avatar-2.jpg" alt="" style="width: 40px; height: 40px;">
-							<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-						</div>
-						<div class="ms-3">
-							<h6 class="align-middle mb-0 text-light">{{ auth()->user()->nama }}</h6>
-							<span>{{ auth()->user()->jabatan->nama }}</span>
+								<i class="fa fa-lg align-middle fa-lg text-light"  style="font-size: 0.73em;" data-feather="user"></i>
+							</div>
+							<div class="ms-3">
+								<h4 class="align-middle mb-0 text-light" >{{ auth()->user()->nama }}</h4>
+								<span>{{ auth()->user()->jabatan->nama }}</span>
+							</div>
 						</div>
 					</div>
 
 					@else
 					<div class="d-flex align-items-center ms-4 mb-4">
 						<div class="ms-3">
-							<i class="align-middle text-light"></i> 
+							<i class="fas fa-camera fa-3x align-middle"></i>
 							<span class="align-midle text-light">Viewer</span>
 						</div>
 					</div>

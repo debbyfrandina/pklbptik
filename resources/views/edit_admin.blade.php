@@ -3,7 +3,7 @@
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
   <div class="navbar-collapse collapse text-center">
-    <h1 class="font-weight-bold text-uppercase">form</h1>
+    <h1 class="font-weight-bold text-uppercase">Edit Data </h1>
   </div>
 </nav>
 
@@ -12,11 +12,6 @@
   @csrf
 
 <div class="container-fluid p-0">
-  <div class="mb-0">
-    <h1 class="h3 d-inline align-middle">Forms</h1>
-    <p class="badge bg-dark text-white ms-2">Semua kolom wajib diisi</p>
-  </div>
-
   {{-- form start --}}
   <form method="POST" action="/input-tata-usaha/submit" enctype="multipart/form-data">
     @csrf

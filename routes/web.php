@@ -31,10 +31,10 @@ Route::get('/list-akun', [UserController::class, 'index']);
 Route::get('/generate-akun', [UserController::class, 'create']);
 Route::post('/generate-akun/submit', [UserController::class, 'store']);
 
-Route::get('/edit-akun/{id}', [DataPemberdayaanController::class, 'edit']);
-Route::put('/edit-akun/{id}', [DataPemberdayaanController::class, 'update']);
+Route::get('/edit-akun/{id}', [UserController::class, 'edit']);
+Route::put('/edit-akun/{id}', [UserController::class, 'update']);
 
-Route::delete('/form-akun/{id}', [DataPengembanganController::class, 'destroy']);
+Route::delete('/list-akun/{id}', [UserController::class, 'destroy']);
 
 //dashboard
 Route::get('/', function () {

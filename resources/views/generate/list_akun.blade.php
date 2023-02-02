@@ -104,7 +104,10 @@
             </div>
           </nav>    
 
-          <div class="container-fluid p-0">          
+          <div class="container-fluid p-0">     
+            <div class="d-flex justify-content-center mb-3">
+              <a class="btn btn-success btn-primary" href="/generate-akun">+ Add Acount</a>
+            </div>      
           {{-- table start --}}
           <div class="row">
             <div class="table-full-width d-flex">
@@ -126,12 +129,11 @@
                       <td class="d-xl-table-cell text-center">{{ $i++ }}</td>
                       <td class="d-xl-table-cell">{{ $d->nama }}</td>
                       <td class="d-xl-table-cell">{{ $d->email }}</td>
-                      <td class="d-xl-table-cell">{{ $d->jabatan_id->nama }}</td>
+                      <td class="d-xl-table-cell">{{ $d->jabatan->nama }}</td>
                       <td class="d-xl-table-cell text-center nav-">
                         <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
-                          <a href="storage/admin/{{$d->file_admin}}" class="btn btn-info" target="_blank">Detail</a>
-                          <a href="/edit-tata-usaha/" class="btn btn-warning" >Edit</a>
-                          <form action="/form-tata-usaha/{{ $d->id }}" method="post" class="d-inline">
+                          <a href="/edit-akun/" class="btn btn-warning" >Edit</a>
+                          <form action="/list-akun/{{ $d->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
                             <button class="btn btn-lg btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
