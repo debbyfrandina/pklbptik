@@ -1,28 +1,23 @@
 @extends('layouts.main')
 
 @section('container')
-<nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
-  <div class="navbar-collapse collapse text-center">
-    <h1 class="font-weight-bold text-uppercase">form</h1>
+<nav class="navbar navbar-expand navbar-light navbar-bg mb-3 justify-content-between">
+  <div class="navbar-collapse collapse">
+    <h2><strong>Form Seksi Pemberdayaan</strong></h2>
+  </div>
+  <!--search start -->
+  <div class="d-flex flex-row-reverse">
+    <form >
+      <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
+      <button class="btn btn-success" type="submit">Search</button>
+    </form>
   </div>
 </nav>
 
 <div class="container-fluid p-0">
-  <div>
-    <h1 class="h3 mb-3"><strong>Data</strong>Form</h1>
-    <div class="d-flex mb-3">
-      <a class="btn btn-success btn-primary" href="/input-pemberdayaan">Add Data</a>
-    </div>  
-  </div>
-
-  {{-- search start --}}
-  <div class="d-flex flex-row-reverse mb-3">
-      <form >
-        <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
-        <button class="btn btn-success" type="submit">Search</button>
-      </form>
-    </div>
-
+  <div class="d-flex justify-content-center mb-3">
+    <a class="btn btn-success btn-primary" href="/input-tata-usaha">+ Add Data</a>
+  </div>  
   {{-- table start --}}
   <div class="row">
     <div class="table-full-width d-flex">

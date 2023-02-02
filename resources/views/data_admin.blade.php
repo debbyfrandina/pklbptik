@@ -1,29 +1,26 @@
 @extends('layouts.main')
 
 @section('container')
-<nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
+<nav class="navbar navbar-expand navbar-light navbar-bg mb-3 justify-content-between">
   <div class="navbar-collapse collapse">
-    <h1>TABLE</h1>
+    <h2><strong>Data Tata Usaha</strong></h2>
+  </div>
+  <!--search start -->
+  <div class="d-flex flex-row-reverse">
+    <form >
+      <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
+      <button class="btn btn-success" type="submit">Search</button>
+    </form>
   </div>
 </nav>
 
-
-  <div class="container-fluid p-0">
-    <h1 class="h3 mb-3"><strong>Data</strong>Analytics</h1>
-    
+  <div class="container-fluid p-0">    
     @if ($message = Session::get('success'))
     <div class="alert alert-success">
       <p>{{ $message }}</p>
     </div>
     @endif
     
-    <!--search start -->
-    <div class="d-flex flex-row-reverse mb-3">
-      <form >
-        <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
-        <button class="btn btn-success" type="submit">Search</button>
-      </form>
-    </div>
     
     {{-- table start --}}
     <div class="row">

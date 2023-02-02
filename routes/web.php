@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LaporanController;
-use App\Http\Controllers\GenerateController;
 use App\Http\Controllers\DataPemberdayaanController;
 use App\Http\Controllers\DataPengembanganController;
 
@@ -19,12 +19,22 @@ use App\Http\Controllers\DataPengembanganController;
 |
 */
 
-Route::get('/list-akun', [GenerateController::class, 'index']);
 
 //login
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout']);
+
+//generate akun
+Route::get('/list-akun', [UserController::class, 'index']);
+
+Route::get('/generate-akun', [UserController::class, 'create']);
+Route::post('/generate-akun/submit', [UserController::class, 'store']);
+
+Route::get('/edit-akun/{id}', [DataPemberdayaanController::class, 'edit']);
+Route::put('/edit-akun/{id}', [DataPemberdayaanController::class, 'update']);
+
+Route::delete('/form-akun/{id}', [DataPengembanganController::class, 'destroy']);
 
 //dashboard
 Route::get('/', function () {
@@ -69,7 +79,7 @@ Route::get('/form-tata-usaha', [LaporanController::class, 'form']);
 Route::delete('/form-pengembangan/{id}', [DataPengembanganController::class, 'destroy']);
 Route::delete('/form-pemberdayaan/{id}', [DataPemberdayaanController::class, 'destroy']);
 Route::delete('/form-tata-usaha/{id}', [LaporanController::class, 'destroy']);
-Route::get('/form-tata-usaha/{id}', [LaporanController::class, 'edit']);
+
 
 
 

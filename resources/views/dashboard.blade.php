@@ -14,14 +14,6 @@
 </html>
 
 @section('container')
-<nav class="navbar navbar-expand navbar-light navbar-bg">
-	<div class="navbar-collapse collapse align-center">
-		<h1 class="text-center font-weight-bold text-uppercase">data statistik kegiatan bptik dikbud jawa tengah</h1>
-	</div>
-</nav>
-
-
-
 <main class="content">
 	<div class="container-fluid p-0">
 		

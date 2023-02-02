@@ -1,22 +1,24 @@
 @extends('layouts.main')
 
 @section('container')
-<nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
-  <div class="navbar-collapse collapse text-center">
-    <h1 class="font-weight-bold text-uppercase">form</h1>
+<nav class="navbar navbar-expand navbar-light navbar-bg mb-3 justify-content-between">
+  <div class="navbar-collapse collapse">
+    <h2><strong>Form Tata Usaha</strong></h2>
   </div>
-</nav>
-
-<div class="container-fluid p-0">
-  <h1 class="h3 mb-3"><strong>Data</strong>Form</h1>
-  
-  {{-- search start --}}
-  <div class="d-flex flex-row-reverse mb-3">
+  <!--search start -->
+  <div class="d-flex flex-row-reverse">
     <form >
       <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
       <button class="btn btn-success" type="submit">Search</button>
     </form>
   </div>
+</nav>
+
+<div class="container-fluid p-0">
+  <div class="d-flex justify-content-center mb-3">
+    <a class="btn btn-success btn-primary" href="/input-tata-usaha">+ Add Data</a>
+  </div>  
+ 
   
   {{-- table start --}}
   <div class="row">
@@ -65,9 +67,6 @@
     </div>
   </div>
 
-  <div class="d-flex justify-content-center mb-3">
-    <a class="btn btn-success btn-primary" href="/input-tata-usaha">Tambah</a>
-  </div>  
 
  
 </div>

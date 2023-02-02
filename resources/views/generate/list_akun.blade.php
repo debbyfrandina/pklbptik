@@ -44,47 +44,67 @@
 					</div>
 				</div>
 				
-					<ul class="sidebar-nav">
-						<li class="sidebar-item {{ ($title === "Generate Akun" ) ? 'active' : '' }}">
-							<a class="sidebar-link " href="#">
-								<i class="align-middle" data-feather="activity"></i> <span class="align-middle">Edit</span>
-							</a>
-						</li>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item {{ ($title === "dashboard" ) ? 'active' : '' }}">
+            <a class="sidebar-link " href="/">
+              <i class="align-middle" data-feather="activity"></i> <span class="align-middle">Dashboard</span>
+            </a>
+          </li>
 
-						<li class="sidebar-item {{ ($title === "Data Akun" ) ? 'active' : '' }}">
-							<a class="sidebar-link " href="/form-tata-usaha">
-								<i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Kembali</span>
-							</a>
-						</li>
-          </ul>
+          <li class="sidebar-item {{ ($title === "Form Tata Usaha" ) ? 'active' : '' }}">
+            <a class="sidebar-link " href="/form-tata-usaha">
+              <i class="align-middle " data-feather="file-plus"></i> <span class="align-middle">Form Data TU</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item {{ ($title === "Data Tata Usaha" ) ? 'active' : '' }}">
+            <a class="sidebar-link" href="/data-tata-usaha">
+              <i class="align-middle" data-feather="file"></i> <span class="align-middle">Data Tata Usaha</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item {{ ($title === "List Akun" ) ? 'active' : '' }}">
+            <a class="sidebar-link" href="/list-akun">
+              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Generate Akun</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/logout">
+              <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
+            </a>
+          </li>
+        </ul>
           
           
-        </div>
-      </nav>
-      
+      </div>
+    </nav>
+     
+    {{-- navbar start --}}
+		<div class="main d-flex flex-column min-vh-100">
+			<nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
+				<div class="navbar-collapse collapse justify-content-center">
+					<h1 class="font-weight-bold text-uppercase text-center">SISTEM INFORMASI PELAPORAN DATA KEGIATAN BPTIK</h1>
+				</div>
+			</nav>
+
+      <!-- main start -->
       <div class="main">
-        <!-- content start -->
-        <div class="container">
-          <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
-            <div class="navbar-collapse collapse text-center">
-              <h1 class="font-weight-bold text-uppercase">form</h1>
+        <div class="container">  
+          <nav class="navbar navbar-expand navbar-light navbar-bg mb-3 justify-content-between">
+            <div class="navbar-collapse collapse">
+              <h2><strong>Form Tata Usaha</strong></h2>
             </div>
-          </nav>
-          
-          <div class="container-fluid p-0">
-            <h1 class="h3 mb-3"><strong>Data</strong>Form</h1>
-            <div class="d-flex justify-content-center mb-3">
-              <a class="btn btn-success btn-primary" href="/input-tata-usaha">Tambah</a>
-            </div>  
-            
-            {{-- search start --}}
-          <div class="d-flex flex-row-reverse mb-3">
-            <form >
-              <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
-          </div>
-          
+            <!--search start -->
+            <div class="d-flex flex-row-reverse">
+              <form >
+                <input name="keyword" type="text" placeholder="Search..." size="40" class="p-1 px-2" value={{ request('keyword') }}>
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>    
+
+          <div class="container-fluid p-0">          
           {{-- table start --}}
           <div class="row">
             <div class="table-full-width d-flex">
@@ -93,11 +113,9 @@
                   <thead class="align-center text-center">
                     <tr>
                       <th class="d-xl-table-cell ">No</th>
-                      <th class="d-xl-table-cell">Nama Program</th>
-                      <th class="d-xl-table-cell">Tujuan</th>
-                      <th class="d-xl-table-cell">Outcome</th>
-                      <th class="d-xl-table-cell">Jumlah Output</th>
-                      <th class="d-xl-table-cell">Tanggal Edit</th>
+                      <th class="d-xl-table-cell">Nama</th>
+                      <th class="d-xl-table-cell">Email</th>
+                      <th class="d-xl-table-cell">Jabatan</th>
                       <th class="d-xl-table-cell">Aksi</th>
                     </tr>
                   </thead>
@@ -107,10 +125,8 @@
                     <tr>
                       <td class="d-xl-table-cell text-center">{{ $i++ }}</td>
                       <td class="d-xl-table-cell">{{ $d->nama }}</td>
-                      <td class="d-xl-table-cell">{{ $d->tujuan }}</td>
-                      <td class="d-xl-table-cell">{{ $d->outcome }}</td>
-                      <td class="d-xl-table-cell text-center">{{ $d->jumlah }}</td>
-                      <td class="d-xl-table-cell text-center">{{ $d->updated_at }}</td>
+                      <td class="d-xl-table-cell">{{ $d->email }}</td>
+                      <td class="d-xl-table-cell">{{ $d->jabatan_id->nama }}</td>
                       <td class="d-xl-table-cell text-center nav-">
                         <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                           <a href="storage/admin/{{$d->file_admin}}" class="btn btn-info" target="_blank">Detail</a>
@@ -131,11 +147,11 @@
               
             </div>
           </div>
-        
-  
+    
         </div>
 			</div>
 			
+      <!-- footer start -->
 			<footer class="footer mt-auto">
 				<div class="container-fluid row text-muted text-start">
 					<p class="mb-0">
@@ -145,7 +161,6 @@
 			</footer>
 		</div>		
 	</div>	
-	<!-- footer start -->
 	
 
 	<script src="js/app.js"></script>

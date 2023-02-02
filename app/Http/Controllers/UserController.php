@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class GenerateController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,10 @@ class GenerateController extends Controller
      */
     public function index()
     {
-        return view('list_akun',[
-            'title' => 'List Akun',
-            'user' => $user
+        $user = User::join('jabatans', 'jabatan_id', '=', 'jabatans.id');
+        return view('generate.list_akun',[
+            "title" => "List Akun",
+            "data" => $user
         ]);
     }
 

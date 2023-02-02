@@ -109,6 +109,11 @@
 		</nav>
 
 		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
+				<div class="navbar-collapse collapse justify-content-center">
+					<h1 class="font-weight-bold text-uppercase text-center">SISTEM INFORMASI PELAPORAN DATA KEGIATAN BPTIK</h1>
+				</div>
+			</nav>
 			<!-- content start -->
 			<div class="container">
 				@yield('container')
