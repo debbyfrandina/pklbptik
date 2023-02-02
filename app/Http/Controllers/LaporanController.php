@@ -120,10 +120,11 @@ class LaporanController extends Controller
      */
     public function edit(Laporan $laporan)
     {
-        // $id = request('id');
+        $id = request('id');
+        $laporan = Laporan::find($id);
         return view('edit_admin',[
             "title" => "Input Tata Usaha",
-            'laporan' => $laporan,
+            'data' => $laporan,
         ]);
     }
 
@@ -141,10 +142,11 @@ class LaporanController extends Controller
             "tujuan" => ['required', 'string'],
             "outcome" => ['required', 'string'],
             "jumlah" => ['required', 'integer'],
-            "file_admin" => ['required'],
         ]);
-        // Laporan::create($validatedData);
         
+        $id = request('id');
+        $laporan = Laporan::find($id);
+
         $input = $request->all();
         if($request->hasFile('file_admin')){
             // get original file name
@@ -156,7 +158,7 @@ class LaporanController extends Controller
 
         $input['user_id'] = auth()->user()->id;
         
-        Laporan::update($input);
+        $laporan->update($input);
         
         return redirect('/form-tata-usaha')->with('succes', 'Data berhasil diperbarui');
         

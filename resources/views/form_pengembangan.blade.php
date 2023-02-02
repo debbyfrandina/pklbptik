@@ -62,7 +62,7 @@
               <td class="d-xl-table-cell text-center nav-">
                 <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
                   <a href="storage/pengembangan/{{$d->file_pengembangan}}" class="btn btn-info" target="_blank">Detail</a>
-                  <a class="btn btn-warning" href="#">Edit</a>
+                  <a href="/edit-pengembangan/{{ $d->id }}" class="btn btn-warning">Edit</a>
                   <form action="/form-pengembangan/{{ $d->id }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf

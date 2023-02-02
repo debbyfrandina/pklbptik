@@ -77,8 +77,8 @@
 							</a>
 						</li>
 
-						<li class="sidebar-item {{ ($title === "generate" ) ? 'active' : '' }}">
-							<a class="sidebar-link" href="/generate">
+						<li class="sidebar-item {{ ($title === "List Akun" ) ? 'active' : '' }}">
+							<a class="sidebar-link" href="/list-akun">
 								<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Generate Akun</span>
 							</a>
 						</li>

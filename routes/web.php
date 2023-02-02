@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\GenerateController;
 use App\Http\Controllers\DataPemberdayaanController;
 use App\Http\Controllers\DataPengembanganController;
 
@@ -17,7 +18,15 @@ use App\Http\Controllers\DataPengembanganController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//wkwkwkwkwk
+
+Route::get('/list-akun', [GenerateController::class, 'index']);
+
+//login
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
+//dashboard
 Route::get('/', function () {
     return view('dashboard',[
         "title" => "dashboard"
@@ -36,19 +45,14 @@ Route::post('/input-tata-usaha/submit', [LaporanController::class, 'store']);
 
 
 //edit
-// Route::get('/edit-tata-usaha', [LaporanController::class, 'edit']);
-Route::post('/edit-tata-usaha/submit', [LaporanController::class, 'update']);
+Route::get('/edit-tata-usaha/{id}', [LaporanController::class, 'edit']);
+Route::put('/edit-tata-usaha/{id}', [LaporanController::class, 'update']);
 
-Route::get('/edit-tata-usaha', function () {
-    return view('edit_admin',[
-        "title" => "Edit Tata Usaha"
-    ]);
-});
-Route::get('/edit-pemberdayaan', function () {
-    return view('edit_pemberdayaan',[
-        "title" => "Edit Pemberdayaan"
-    ]);
-});
+Route::get('/edit-pemberdayaan/{id}', [DataPemberdayaanController::class, 'edit']);
+Route::put('/edit-pemberdayaan/{id}', [DataPemberdayaanController::class, 'update']);
+
+Route::get('/edit-pengembangan/{id}', [DataPengembanganController::class, 'edit']);
+Route::put('/edit-pengembangan/{id}', [DataPengembanganController::class, 'update']);
 
 //data
 Route::get('/data-pengembangan', [DataPengembanganController::class, 'data']);
@@ -68,13 +72,9 @@ Route::delete('/form-tata-usaha/{id}', [LaporanController::class, 'destroy']);
 Route::get('/form-tata-usaha/{id}', [LaporanController::class, 'edit']);
 
 
-//login
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/logout', [LoginController::class, 'logout']);
 
-Route::get('/generate', function () {
-    return view('generate',[
-        "title" => "generate"
-    ]);
-});
+// Route::get('/generate', function () {
+//     return view('generate',[
+//         "title" => "generate"
+//     ]);
+// });

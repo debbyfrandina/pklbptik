@@ -75,15 +75,15 @@ class DataPemberdayaanController extends Controller
      */
     public function store(StoreDataPemberdayaanRequest $request)
     {
-        // $validatedData = $request->validate([
-        //     "nama_program" => ['required', 'string'],
-        //     "tujuan" => ['required', 'string'],
-        //     "outcome" => ['required', 'string'],
-        //     "tanggal_pelaksanaan" => ['required', 'date'],
-        //     "tempat_pelaksanaan" => ['required', 'string'],
-        //     "jumlah_peserta" => ['required', 'integer'],
-        //     "jumlah_sekolah" => ['required', 'integer'],
-        // ]);
+        $validatedData = $request->validate([
+            "nama_program" => ['required', 'string'],
+            "tujuan" => ['required', 'string'],
+            "outcome" => ['required', 'string'],
+            "tanggal_pelaksanaan" => ['required', 'date'],
+            "tempat_pelaksanaan" => ['required', 'string'],
+            "jumlah_peserta" => ['required', 'integer'],
+            "jumlah_sekolah" => ['required', 'integer'],
+        ]);
 
         // $validatedData['user_id'] = auth()->user()->id;
 
@@ -116,7 +116,7 @@ class DataPemberdayaanController extends Controller
     {
         //
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -125,7 +125,12 @@ class DataPemberdayaanController extends Controller
      */
     public function edit(DataPemberdayaan $dataPemberdayaan)
     {
-        //
+        $id = request('id');
+        $dataPemberdayaan = DataPemberdayaan::find($id);
+        return view('edit_pemberdayaan',[
+            "title" => "Edit Pemberdayaan",
+            'data' => $dataPemberdayaan,
+        ]);
     }
 
     /**
@@ -137,7 +142,33 @@ class DataPemberdayaanController extends Controller
      */
     public function update(UpdateDataPemberdayaanRequest $request, DataPemberdayaan $dataPemberdayaan)
     {
-        //
+        $validatedData = $request->validate([
+            "nama_program" => ['required', 'string'],
+            "tujuan" => ['required', 'string'],
+            "outcome" => ['required', 'string'],
+            "tanggal_pelaksanaan" => ['required', 'date'],
+            "tempat_pelaksanaan" => ['required', 'string'],
+            "jumlah_peserta" => ['required', 'integer'],
+            "jumlah_sekolah" => ['required', 'integer'],
+        ]);
+
+        $id = request('id');
+        $dataPemberdayaan = DataPemberdayaan::find($id);
+
+        $input = $request->all();
+        if($request->hasFile('file_pemberdayaan')){
+            // get original file name
+            $fileName = $request->file('file_pemberdayaan')->getClientOriginalName();
+            // upload file
+            $request->file('file_pemberdayaan')->storeAs('public/pemberdayaan', $fileName);
+            $input['file_pemberdayaan'] = $fileName;
+        }
+
+        $input['user_id'] = auth()->user()->id;
+            
+        $dataPemberdayaan->update($input);
+
+        return redirect('/form-pemberdayaan')->with('success', 'Data berhasil dimasukkan');
     }
 
     /**

@@ -79,18 +79,17 @@ class DataPengembanganController extends Controller
      */
     public function store(StoreDataPengembanganRequest $request)
     {
-        // dd($request);
-        // $validatedData = $request->validate([
-        //     "nama_program" => ['required', 'string'],
-        //     "nama_kegiatan" => ['required', 'string'],
-        //     "nama_sub_kegiatan" => ['required', 'string'],
-        //     "nama_sub_sub_kegiatan" => ['required', 'string'],
-        //     "tanggal_mulai" => ['required', 'date'],
-        //     "tanggal_selesai" => ['required', 'date'],
-        //     "tempat_pelaksanaan" => ['required', 'string'],
-        //     "jumlah_peserta" => ['required', 'integer'],
-        //     "jumlah_produk" => ['required', 'integer'],
-        // ]);
+        $validatedData = $request->validate([
+            "nama_program" => ['required', 'string'],
+            "nama_kegiatan" => ['required', 'string'],
+            "nama_sub_kegiatan" => ['required', 'string'],
+            "nama_sub_sub_kegiatan" => ['required', 'string'],
+            "tanggal_mulai" => ['required', 'date'],
+            "tanggal_selesai" => ['required', 'date'],
+            "tempat_pelaksanaan" => ['required', 'string'],
+            "jumlah_peserta" => ['required', 'integer'],
+            "jumlah_produk" => ['required', 'integer'],
+        ]);
 
         // $validatedData['user_id'] = auth()->user()->id;
 
@@ -109,7 +108,6 @@ class DataPengembanganController extends Controller
         
         DataPengembangan::create($input);
     
-
         return redirect('/form-pengembangan')->with('succes', 'Data berhasil dimasukkan');
     }
 
@@ -133,7 +131,12 @@ class DataPengembanganController extends Controller
      */
     public function edit(DataPengembangan $dataPengembangan)
     {
-        //
+        $id = request('id');
+        $dataPengembangan = DataPengembangan::find($id);
+        return view('edit_pengembangan',[
+            "title" => "Edit Pengembangan",
+            'data' => $dataPengembangan,
+        ]);
     }
 
     /**
@@ -145,7 +148,36 @@ class DataPengembanganController extends Controller
      */
     public function update(UpdateDataPengembanganRequest $request, DataPengembangan $dataPengembangan)
     {
-        //
+        $validatedData = $request->validate([
+            "nama_program" => ['required', 'string'],
+            "nama_kegiatan" => ['required', 'string'],
+            "nama_sub_kegiatan" => ['required', 'string'],
+            "nama_sub_sub_kegiatan" => ['required', 'string'],
+            "tanggal_mulai" => ['required', 'date'],
+            "tanggal_selesai" => ['required', 'date'],
+            "tempat_pelaksanaan" => ['required', 'string'],
+            "jumlah_peserta" => ['required', 'integer'],
+            "jumlah_produk" => ['required', 'integer'],
+        ]);
+
+        $id = request('id');
+        $dataPengembangan = DataPengembangan::find($id);
+
+
+        $input = $request->all();
+        if($request->hasFile('file_pengembangan')){
+            // get original file name
+            $fileName = $request->file('file_pengembangan')->getClientOriginalName();
+            // upload file
+            $request->file('file_pengembangan')->storeAs('public/pengembangan', $fileName);
+            $input['file_pengembangan'] = $fileName;
+        }
+
+        $input['user_id'] = auth()->user()->id;
+        
+        $dataPengembangan->update($input);
+    
+        return redirect('/form-pengembangan')->with('succes', 'Data berhasil dimasukkan');
     }
 
     /**

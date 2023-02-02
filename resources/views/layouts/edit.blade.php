@@ -10,13 +10,13 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 	<title>Pelaporan Data - BPTIK DIKBUD JATENG</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -26,7 +26,7 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<div class="sidebar-brand">
-					<img class="rounded-circle" src="img/photos/logo.png" alt="" style="width: 50px; height: 60px;">
+					<img class="rounded-circle" src="/img/photos/logo.png" alt="" style="width: 50px; height: 60px;">
 					<span class="align-middle ms-2">BPTIK DIKBUD</span>
         </div>
 				
@@ -36,7 +36,7 @@
 					<div>
 						<div class="d-flex align-items-center ms-4 mb-4">
 							<div class="position-relative">
-								<img class="rounded-circle" src="img/avatars/avatar-2.jpg" alt="" style="width: 40px; height: 40px;">
+								<img class="rounded-circle" src="/img/avatars/avatar-2.jpg" alt="" style="width: 40px; height: 40px;">
 							<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
 						</div>
 						<div class="ms-3">
