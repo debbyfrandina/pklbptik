@@ -56,6 +56,7 @@ Route::get('/form-tata-usaha', [LaporanController::class, 'form']);
 Route::delete('/form-pengembangan/{id}', [DataPengembanganController::class, 'destroy']);
 Route::delete('/form-pemberdayaan/{id}', [DataPemberdayaanController::class, 'destroy']);
 Route::delete('/form-tata-usaha/{id}', [LaporanController::class, 'destroy']);
+Route::get('/form-tata-usaha/{id}', [LaporanController::class, 'edit']);
 
 
 //login

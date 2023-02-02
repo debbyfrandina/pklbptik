@@ -120,7 +120,10 @@ class LaporanController extends Controller
      */
     public function edit(Laporan $laporan)
     {
-       ///
+       return view('edit-tata-usaha', [
+        'laporan'=>$laporan,
+        
+       ]);
     }
 
     /**
