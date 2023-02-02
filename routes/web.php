@@ -17,7 +17,7 @@ use App\Http\Controllers\DataPengembanganController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//wkwkwkwkwk
 Route::get('/', function () {
     return view('dashboard',[
         "title" => "dashboard"
