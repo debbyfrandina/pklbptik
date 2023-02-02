@@ -16,8 +16,7 @@
   </div>
 
   {{-- form start --}}
-  @foreach ($data as $d)
-  <form method="POST" action="/edit-tata-usaha/{{ $d->id }}" enctype="multipart/form-data">
+  <form method="POST" action="/edit-tata-usaha/" enctype="multipart/form-data">
     @method('put')
     @csrf
   <div class="row">
@@ -26,8 +25,7 @@
 
         <div class="card-body">
           <h5 class="card-title mb-0">Nama Kegiatan</h5><br>
-          <input type="text" class="form-control" placeholder="Input nama kegiatan" required name="nama"
-          value="{{ old('nama', $d->id) }}">
+          <input type="text" class="form-control" placeholder="Input nama kegiatan" required name="nama">
         </div>
 
         <div class="card-body">
@@ -53,7 +51,6 @@
         <div class="d-flex justify-content-center mb-3">
           <button class="btn btn-success btn-primary" required type="submit">Submit</button>
         </div>  
-  
       </div>
     </div>
   </div>  

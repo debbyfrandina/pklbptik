@@ -120,10 +120,11 @@ class LaporanController extends Controller
      */
     public function edit(Laporan $laporan)
     {
-       return view('edit-tata-usaha', [
-        'laporan'=>$laporan,
-        
-       ]);
+        // $id = request('id');
+        return view('edit_admin',[
+            "title" => "Input Tata Usaha",
+            'laporan' => $laporan,
+        ]);
     }
 
     /**
@@ -135,7 +136,30 @@ class LaporanController extends Controller
      */
     public function update(UpdateLaporanRequest $request, Laporan $laporan)
     {
-        //
+        $validatedData = $request->validate([
+            "nama" => ['required', 'string'],
+            "tujuan" => ['required', 'string'],
+            "outcome" => ['required', 'string'],
+            "jumlah" => ['required', 'integer'],
+            "file_admin" => ['required'],
+        ]);
+        // Laporan::create($validatedData);
+        
+        $input = $request->all();
+        if($request->hasFile('file_admin')){
+            // get original file name
+            $fileName = $request->file('file_admin')->getClientOriginalName();
+            // upload file
+            $request->file('file_admin')->storeAs('public/admin', $fileName);
+            $input['file_admin'] = $fileName;
+        }
+
+        $input['user_id'] = auth()->user()->id;
+        
+        Laporan::update($input);
+        
+        return redirect('/form-tata-usaha')->with('succes', 'Data berhasil diperbarui');
+        
     }
 
     /**
@@ -152,12 +176,4 @@ class LaporanController extends Controller
         return redirect('/form-tata-usaha')->with('success', 'Data berhasil dihapus');
     }
     
-    // public function destroy($id)
-    // {
-    //     $laporan = Laporans::find($id);
-
-    //     $laporan->delete();
-
-    //     return redirect('/form-tata-usaha')->with('success', 'Data berhasil dihapus');
-    // }
 }
