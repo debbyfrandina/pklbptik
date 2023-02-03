@@ -30,32 +30,6 @@
 					<span class="align-middle ms-2">BPTIK DIKBUD</span>
         </div>
 				
-				<div>
-					
-					@if (auth()->user())
-					<div>
-						<div class="d-flex align-items-center ms-4 mb-4">
-							<div class="position-relative">
-								<i class="fa fa-lg align-middle fa-lg text-light"  style="font-size: 0.73em;" data-feather="user"></i>
-							</div>
-							<div class="ms-3">
-								<h4 class="align-middle mb-0 text-light" >{{ auth()->user()->nama }}</h4>
-								<span>{{ auth()->user()->jabatan->nama }}</span>
-							</div>
-						</div>
-					</div>
-
-					@else
-					<div class="d-flex align-items-center ms-4 mb-4">
-						<div class="ms-3">
-							<i class="fas fa-camera fa-3x align-middle"></i>
-							<span class="align-midle text-light">Viewer</span>
-						</div>
-					</div>
-					@endif
-
-				</div>
-				
 				@if (auth()->user())
 					@if (auth()->user()->jabatan_id == 1)
 					<ul class="sidebar-nav">
@@ -193,6 +167,30 @@
 				</ul>
 
 				@endif
+
+				<div>
+					@if (auth()->user())
+					<div>
+						<div class="d-flex align-items-center ms-4 mb-4 col-auto">
+							<div class="stat text-primary " >
+								<i class="align-middle text-light"  data-feather="user"></i>
+							</div>
+							<div class="ms-3">
+								<h4 class="align-middle mb-0 text-light" >{{ auth()->user()->nama }}</h4>
+								<span>{{ auth()->user()->jabatan->nama }}</span>
+							</div>
+						</div>
+					</div>
+
+					@else
+					<div class="d-flex align-items-center ms-4 mb-4">
+						<div class="ms-3">
+							<i class="fas fa-camera fa-3x align-middle"></i>
+							<span class="align-midle text-light">Viewer</span>
+						</div>
+					</div>
+					@endif
+				</div>
 
 			</div>
 		</nav>

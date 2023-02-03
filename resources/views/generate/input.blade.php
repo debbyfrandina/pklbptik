@@ -88,8 +88,8 @@
               <div class="card">
       
                 <div class="card-body">
-                  <h5 class="card-title mb-0">Nama Lengkap</h5><br>
-                  <input type="text" class="form-control" placeholder="Input nama lengkap" required name="nama">
+                  <h5 class="card-title mb-0 ">Nama Lengkap</h5><br>
+                  <input type="text" class="form-control text-capitalize" placeholder="Input nama lengkap" required name="nama">
                 </div>
       
                 <div class="card-body">
