@@ -3,7 +3,7 @@
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
   <div class="navbar-collapse collapse text-center">
-    <h1 class="font-weight-bold text-uppercase">form</h1>
+    <h2><strong>Edit Pemberdayaan</strong></h2>
   </div>
 </nav>
 

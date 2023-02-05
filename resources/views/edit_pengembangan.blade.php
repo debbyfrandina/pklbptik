@@ -3,7 +3,7 @@
 @section('container')
 <nav class="navbar navbar-expand navbar-light navbar-bg mb-4">
   <div class="navbar-collapse collapse text-center">
-    <h1 class="font-weight-bold text-uppercase">form</h1>
+    <h2><strong>Edit Data Pengembangan</strong></h2>
   </div>
 </nav>
 
@@ -13,11 +13,7 @@
 
 <div class="container-fluid p-0">
   {{-- form start --}}
-  <div class="mb-0">
-    <h1 class="h3 d-inline align-middle">Forms</h1>
-    <p class="badge bg-dark text-white ms-2">Semua kolom wajib diisi</p>
-  </div>
-
+  
   <div class="row">
     <div class="col-2 col-lg-12">
       <div class="card">
