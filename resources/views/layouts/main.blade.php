@@ -168,6 +168,7 @@
 
 				@endif
 
+				{{-- Profile start --}}
 				<div>
 					@if (auth()->user())
 					<div>

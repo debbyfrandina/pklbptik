@@ -86,7 +86,12 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $id = request('id');
+        $user = User::find($id);
+        return view('generate.edit',[
+            "title" => "Edit Akun",
+            'data' => $user,
+        ]);
     }
 
     /**
@@ -98,7 +103,20 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $validatedData = $request->validate([
+            "nama" => ['required', 'string'],
+            "email" => ['required', 'string'],
+            "password" => ['required', 'string'],
+            "jabatan_id" => ['required', 'integer'],
+        ]);
+        
+        // Set the generated password
+        $validatedData['password'] = bcrypt($validatedData['password']);
+        
+        // Create user
+        User::update($validatedData);
+
+        return redirect('/list-akun')->with('succes', 'Data berhasil dimasukkan');
     }
 
     /**

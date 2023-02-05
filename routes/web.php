@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataPemberdayaanController;
 use App\Http\Controllers\DataPengembanganController;
 
@@ -37,11 +38,7 @@ Route::put('/edit-akun/{id}', [UserController::class, 'update']);
 Route::delete('/list-akun/{id}', [UserController::class, 'destroy']);
 
 //dashboard
-Route::get('/', function () {
-    return view('dashboard',[
-        "title" => "dashboard"
-    ]);
-});
+Route::get('/', [DashboardController::class, 'index']);
 
 //input
 Route::get('/input-pemberdayaan', [DataPemberdayaanController::class, 'create']);

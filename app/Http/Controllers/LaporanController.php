@@ -123,7 +123,7 @@ class LaporanController extends Controller
         $id = request('id');
         $laporan = Laporan::find($id);
         return view('edit_admin',[
-            "title" => "Input Tata Usaha",
+            "title" => "Edit Tata Usaha",
             'data' => $laporan,
         ]);
     }

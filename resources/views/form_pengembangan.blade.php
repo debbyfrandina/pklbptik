@@ -16,7 +16,7 @@
 
 <div class="container-fluid p-0">
   <div class="d-flex justify-content-center mb-3">
-    <a class="btn btn-success btn-primary" href="/input-tata-usaha">+ Add Data</a>
+    <a class="btn btn-success btn-primary" href="/input-pengembangan">+ Add Data</a>
   </div>  
   {{-- table start --}}
   <div class="row">

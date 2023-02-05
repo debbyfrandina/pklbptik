@@ -117,11 +117,11 @@
 				<div class="card flex-fill w-100">
 					<div class="card-header">
 
-						<h5 class="card-title mb-0">Recent Movement</h5>
+						<h5 class="card-title mb-0">chart pemberdayaan</h5>
 					</div>
 					<div class="card-body py-3">
 						<div class="chart chart-sm">
-							<canvas id="chartjs-dashboard-line"></canvas>
+							<canvas id="chartjs-pemberdayaan"></canvas>
 						</div>
 					</div>
 				</div>
@@ -285,4 +285,57 @@
 
 	</div>
 </main>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		// Bar chart
+		new Chart(document.getElementById("chartjs-pemberdayaan"), {
+			type: "bar",
+			data: {
+				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				datasets: [{
+					label: "Jumlah siswa",
+					backgroundColor: window.theme.primary,
+					borderColor: window.theme.primary,
+					hoverBackgroundColor: window.theme.primary,
+					hoverBorderColor: window.theme.primary,
+					data: @json($dataSiswa),
+					barPercentage: .75,
+					categoryPercentage: .5
+				}, {
+					label: "Jumlah sekolah",
+					backgroundColor: "#dee2e6",
+					borderColor: "#dee2e6",
+					hoverBackgroundColor: "#dee2e6",
+					hoverBorderColor: "#dee2e6",
+					data: @json($dataSekolah),
+					barPercentage: .75,
+					categoryPercentage: .5
+				}]
+			},
+			options: {
+				maintainAspectRatio: false,
+				legend: {
+					display: false
+				},
+				scales: {
+					yAxes: [{
+						gridLines: {
+							display: false
+						},
+						stacked: false,
+						ticks: {
+							stepSize: 20
+						}
+					}],
+					xAxes: [{
+						stacked: false,
+						gridLines: {
+							color: "transparent"
+						}
+					}]
+				}
+			}
+		});
+	});
+</script>
 @endsection

@@ -132,7 +132,7 @@
                       <td class="d-xl-table-cell">{{ $d->jabatan->nama }}</td>
                       <td class="d-xl-table-cell text-center nav-">
                         <div class="btn-group-vertical btn-group-lg mb-3" role="group" aria-label="Vertical button group">
-                          <a href="/edit-akun/" class="btn btn-warning" >Edit</a>
+                          <a href="/edit-akun/{{ $d->id }}" class="btn btn-warning" >Edit</a>
                           <form action="/list-akun/{{ $d->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
